@@ -30,6 +30,9 @@
     
       <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
       
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
       
 
 
@@ -146,7 +149,7 @@
 
     --eca-text: #e0e4ea;
     --eca-text-secondary: #8a9ab0;
-    --eca-text-muted: #5a6a7a;
+    --eca-text-muted: #7f8c9c;
 
     --eca-bg-primary: #12121e;
     --eca-bg-secondary: #1a1a2e;
@@ -807,6 +810,23 @@
     box-shadow: 0 6px 18px var(--eca-brand-shadow-md);
   }
 
+  /* The primary buttons use a light gradient in the dark scheme, so their
+     text, tag and icon have to be dark to stay readable */
+  [data-md-color-scheme="slate"] .eca-install-btn--primary,
+  [data-md-color-scheme="slate"] .eca-install-btn--primary:hover,
+  [data-md-color-scheme="slate"] .md-typeset a.eca-install-btn--primary,
+  [data-md-color-scheme="slate"] .md-typeset a.eca-install-btn--primary:hover,
+  [data-md-color-scheme="slate"] .eca-install-download__link--primary,
+  [data-md-color-scheme="slate"] .eca-install-download__link--primary:hover,
+  [data-md-color-scheme="slate"] .md-typeset a.eca-install-download__link--primary,
+  [data-md-color-scheme="slate"] .md-typeset a.eca-install-download__link--primary:hover {
+    color: #12121e;
+  }
+
+  [data-md-color-scheme="slate"] .eca-install-download__link--primary .eca-install-download__tag {
+    color: rgba(18, 18, 30, 0.75);
+  }
+
   .eca-install-download__tag {
     margin-left: auto;
     padding-left: 0.75rem;
@@ -1117,7 +1137,14 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -1165,6 +1192,32 @@
         </div>
       </div>
     </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -2806,7 +2859,7 @@
         <!-- CLI panel: install script for the eca-cli terminal client. -->
         <div class="eca-install-panel eca-install-panel--cli">
           <div class="eca-install-panel__body">
-            <h3 class="eca-install-panel__title">
+            <h3 class="eca-install-panel__title" id="cli">
               <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8h16v10zM6.5 10.5l1.06-1.06L10.5 12l-2.94 2.56L6.5 13.5 8.38 12 6.5 10.5zM12 14h5.5v1.5H12V14z"/></svg>
               ECA CLI
             </h3>
@@ -2836,9 +2889,29 @@ eca-cli</pre>
               The script requires <code>curl</code> and <code>tar</code>, and installs a single
               self-contained <code>eca-cli</code> binary for Linux or macOS (x86_64 / arm64) in
               <code>~/.local/bin</code> (<code>/usr/local/bin</code> as root); pass
-              <code>--dir &lt;dir&gt;</code> to pick another place. On other platforms, run the
-              <code>eca-cli.jar</code> release with Babashka: <code>bb eca-cli.jar</code>.
+              <code>--dir &lt;dir&gt;</code> to pick another place. mise installs it under its own
+              tool data. On other platforms, run the <code>eca-cli.jar</code> release with
+              Babashka: <code>bb eca-cli.jar</code>.
             </p>
+            <p class="eca-install-panel__desc">
+              Or install it with <a href="https://mise.jdx.dev" target="_blank" rel="noopener">mise</a>:
+            </p>
+            <div class="eca-code">
+              <div class="eca-code__bar">
+                <span class="eca-code__dot eca-code__dot--red"></span>
+                <span class="eca-code__dot eca-code__dot--yellow"></span>
+                <span class="eca-code__dot eca-code__dot--green"></span>
+                <span class="eca-code__title">shell</span>
+              </div>
+<pre><span class="hl-comm"># Register the plugin under the eca-cli name</span>
+mise plugin install eca-cli https://github.com/editor-code-assistant/eca-mise-plugin
+
+<span class="hl-comm"># Install latest version of eca-cli</span>
+mise use -g eca-cli
+
+<span class="hl-comm"># Verify installation</span>
+eca-cli --version</pre>
+            </div>
 
             <p class="eca-install-panel__footer-note">
               <a href="https://github.com/editor-code-assistant/eca-cli" target="_blank" rel="noopener">
@@ -3040,6 +3113,10 @@ mise use -g eca@0.58.0
 <span class="hl-comm"># Verify installation</span>
 eca --version</pre>
             </div>
+            <p>
+              The same plugin also installs the terminal client as <code>eca-cli</code> &mdash;
+              see the <a href="#cli">ECA CLI install</a> section.
+            </p>
           </div>
 
           <!-- GitHub Releases -->
