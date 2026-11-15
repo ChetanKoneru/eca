@@ -2,10 +2,10 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://eca.dev/config.json",
   "title": "ECA Configuration",
-  "description": "Configuration schema for ECA (Editor Code Assistant). See https://eca.dev/config/introduction for full documentation.",
-  "markdownDescription": "Configuration schema for ECA (Editor Code Assistant). See https://eca.dev/config/introduction for full documentation.",
+  "description": "Configuration schema for ECA (Editor Code Assistant). See https://eca.dev/config/introduction for full documentation. Other root keys may belong to modules; ECA warns about unknown ones at startup and in /doctor.",
+  "markdownDescription": "Configuration schema for ECA (Editor Code Assistant). See https://eca.dev/config/introduction for full documentation. Other root keys may belong to [modules](https://eca.dev/config/modules); ECA warns about unknown ones at startup and in `/doctor`.",
   "type": "object",
-  "additionalProperties": false,
+  "additionalProperties": true,
   "allowComments": true,
   "properties": {
     "$schema": {
@@ -119,6 +119,9 @@
         "type": "string"
       }
     },
+    "mcpToolSearch": {
+      "$ref": "#/definitions/mcpToolSearch"
+    },
     "commands": {
       "type": "array",
       "description": "Custom command prompt files.",
@@ -188,9 +191,9 @@
     },
     "streamIdleTimeoutSeconds": {
       "type": "integer",
-      "description": "Timeout in seconds to wait without receiving data before considering a LLM stream stalled.",
-      "markdownDescription": "Timeout in seconds to wait without receiving data before considering a LLM stream stalled.",
-      "default": 120
+      "description": "Timeout in seconds to wait without receiving data before considering a LLM stream stalled. Keepalive pings don't count as data.",
+      "markdownDescription": "Timeout in seconds to wait without receiving data before considering a LLM stream stalled. Keepalive pings don't count as data.",
+      "default": 300
     },
     "connectTimeoutSeconds": {
       "type": "integer",
@@ -221,6 +224,19 @@
       "minimum": 0,
       "maximum": 100,
       "default": 75
+    },
+    "autoCompactTokensLeft": {
+      "type": "integer",
+      "description": "Remaining context tokens (model context limit minus used tokens) at or below which auto-compact triggers. Takes precedence over autoCompactPercentage, which is only used as fallback when this value is not smaller than the model context limit. Useful when switching between models with very different context sizes.",
+      "markdownDescription": "Remaining context tokens (model context limit minus used tokens) at or below which auto-compact triggers. Takes precedence over `autoCompactPercentage`, which is only used as fallback when this value is not smaller than the model context limit. Useful when switching between models with very different context sizes.",
+      "minimum": 1
+    },
+    "autoCompactMaxPerTurn": {
+      "type": "integer",
+      "description": "Maximum number of auto-compactions in a single turn. Each compaction sends the whole context to the LLM, so this stops a turn that keeps refilling the context from compacting without end. When reached, a context overflow is shown as an error instead.",
+      "markdownDescription": "Maximum number of auto-compactions in a single turn. Each compaction sends the whole context to the LLM, so this stops a turn that keeps refilling the context from compacting without end. When reached, a context overflow is shown as an error instead.",
+      "minimum": 1,
+      "default": 3
     },
     "includeParentAgentsFiles": {
       "type": "boolean",
@@ -323,8 +339,8 @@
     },
     "otlp": {
       "type": "object",
-      "description": "OpenTelemetry OTLP collector configuration. Keys follow otlp auto-configure settings.",
-      "markdownDescription": "OpenTelemetry OTLP collector configuration. Keys follow otlp auto-configure settings.",
+      "description": "OpenTelemetry OTLP collector configuration. Keys follow otlp auto-configure settings. Setting it turns on the eca/otel module.",
+      "markdownDescription": "OpenTelemetry OTLP collector configuration. Keys follow otlp auto-configure settings. Setting it turns on the `eca/otel` module.",
       "additionalProperties": {
         "type": "string"
       }
@@ -400,10 +416,47 @@
         }
       }
     },
+    "modules": {
+      "type": "object",
+      "description": "Per module id, e.g. 'eca/mcp' or 'acme/jira': turn a module on or off, load an external module from a file or folder, or change its priority. See https://eca.dev/config/modules",
+      "markdownDescription": "Per module id, e.g. `eca/mcp` or `acme/jira`: turn a module on or off, load an external module from a file or folder, or change its priority. See [Modules](https://eca.dev/config/modules).",
+      "examples": [
+        {
+          "eca/mcp": {
+            "enabled": false
+          },
+          "acme/jira": {
+            "source": "~/dev/eca-jira/jira.clj",
+            "priority": 10
+          }
+        }
+      ],
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "description": "Turn the module on or off. Default: on, unless the module ships off. Disabling a module also disables the modules that require it.",
+            "markdownDescription": "Turn the module on or off. Default: on, unless the module ships off. Disabling a module also disables the modules that require it."
+          },
+          "source": {
+            "type": "string",
+            "description": "File or folder of an external module: a .clj file, or a folder with a module.clj. '~' expands; a relative path resolves against the first workspace root.",
+            "markdownDescription": "File or folder of an external module: a `.clj` file, or a folder with a `module.clj`. `~` expands; a relative path resolves against the first workspace root."
+          },
+          "priority": {
+            "type": "integer",
+            "description": "Order of the module's event handlers, higher first. Default: 0 for external modules, -100 for built-in ones.",
+            "markdownDescription": "Order of the module's event handlers, higher first. Default: `0` for external modules, `-100` for built-in ones."
+          }
+        }
+      }
+    },
     "plugins": {
       "type": "object",
-      "description": "Plugin system for loading external configuration from git repos or local paths. Each key (except 'install') is a named plugin source with a 'source' URL or path. 'install' lists plugin names to install from any registered source.",
-      "markdownDescription": "Plugin system for loading external configuration from git repos or local paths. Each key (except `install`) is a named plugin source with a `source` URL or path. `install` lists plugin names to install from any registered source.",
+      "description": "Plugin system for loading external configuration from git repos or local paths. Each key except 'install' and 'installMode' is a named plugin source with a 'source' URL or path.",
+      "markdownDescription": "Plugin system for loading external configuration from git repos or local paths. Each key except `install` and `installMode` is a named plugin source with a `source` URL or path.",
       "examples": [
         {
           "my-org": {
@@ -413,10 +466,17 @@
         }
       ],
       "properties": {
+        "installMode": {
+          "type": "string",
+          "enum": ["append", "replace"],
+          "default": "append",
+          "description": "Use 'replace' so this file's 'install' list stands alone instead of combining with lists from other config sources. Applies only within the same file.",
+          "markdownDescription": "Use `replace` so this file's `install` list stands alone instead of combining with lists from other config sources. Applies only within the same file."
+        },
         "install": {
           "type": "array",
-          "description": "List of plugin names to install from registered sources.",
-          "markdownDescription": "List of plugin names to install from registered sources.",
+          "description": "List of plugins to install: 'name' or 'name@source'. Lists from all config sources are combined, not replaced.",
+          "markdownDescription": "List of plugins to install: `name` or `name@source`. Lists from all config sources are combined, not replaced.",
           "items": {
             "type": "string"
           }
@@ -459,8 +519,8 @@
       "properties": {
         "enabled": {
           "type": "boolean",
-          "description": "Enables the remote HTTP server.",
-          "markdownDescription": "Enables the remote HTTP server."
+          "description": "Enables the remote HTTP server, turning on the eca/remote module.",
+          "markdownDescription": "Enables the remote HTTP server, turning on the `eca/remote` module."
         },
         "host": {
           "type": "string",
@@ -523,10 +583,32 @@
         }
       }
     },
+    "repl": {
+      "type": "object",
+      "description": "Where the eca/repl module's nREPL listens, a REPL on ECA's module runtime. The module is off by default: turn it on with modules.eca/repl.enabled, '/modules enable eca/repl' or 'eca server --repl'. See https://eca.dev/config/modules",
+      "markdownDescription": "Where the `eca/repl` module's nREPL listens, a REPL on ECA's module runtime. The module is off by default: turn it on with `modules.eca/repl.enabled`, `/modules enable eca/repl` or `eca server --repl`. See [Modules](https://eca.dev/config/modules#a-repl-on-eca).",
+      "additionalProperties": false,
+      "properties": {
+        "host": {
+          "type": "string",
+          "default": "127.0.0.1",
+          "description": "A loopback address: nREPL has no authentication, so ECA refuses others.",
+          "markdownDescription": "A loopback address: nREPL has no authentication, so ECA refuses others."
+        },
+        "port": {
+          "type": "integer",
+          "default": 0,
+          "minimum": 0,
+          "maximum": 65535,
+          "description": "The port. 0 picks a free one.",
+          "markdownDescription": "The port. `0` picks a free one."
+        }
+      }
+    },
     "network": {
       "type": "object",
-      "description": "Network configuration for custom CA certificates and mTLS client certificates. Values support dynamic string interpolation (e.g. '${env:SSL_CERT_FILE}').",
-      "markdownDescription": "Network configuration for custom CA certificates and mTLS client certificates. Values support dynamic string interpolation (e.g. `${env:SSL_CERT_FILE}`).",
+      "description": "Network configuration for custom CA certificates and mTLS client certificates, read once at startup from the global config or ECA_CONFIG, plus the extraConfigs they list with absolute or ~ paths (not initializationOptions or project config). Values support dynamic string interpolation (e.g. '${env:SSL_CERT_FILE}').",
+      "markdownDescription": "Network configuration for custom CA certificates and mTLS client certificates, read once at startup from the global config or `ECA_CONFIG`, plus the `extraConfigs` they list with absolute or `~` paths (not `initializationOptions` or project config). Values support dynamic string interpolation (e.g. `${env:SSL_CERT_FILE}`).",
       "additionalProperties": false,
       "properties": {
         "caCertFile": {
@@ -623,6 +705,16 @@
             "openai-chat",
             "anthropic",
             "bedrock"
+          ]
+        },
+        "inherit": {
+          "type": "string",
+          "description": "Provider to inherit config and behavior from (login methods, models, request options), keeping a separate login. Useful for multiple accounts of the same provider, e.g. a work and a personal subscription. Credentials (key, keyRc, keyEnv) are not inherited.",
+          "markdownDescription": "Provider to inherit config and behavior from (login methods, models, request options), keeping a separate login. Useful for multiple accounts of the same provider, e.g. a work and a personal subscription. Credentials (`key`, `keyRc`, `keyEnv`) are not inherited.",
+          "examples": [
+            "anthropic",
+            "openai",
+            "github-copilot"
           ]
         },
         "fetchModels": {
@@ -792,6 +884,11 @@
           "default": 60,
           "description": "Maximum total delay before retrying a provider rate limit, including ECA's one-second safety buffer. The delay is derived from retry-after or provider-specific reset data and defaults to a 60-second cap. When the total delay exceeds the cap, ECA gives up retrying and surfaces the reset time in the error.",
           "markdownDescription": "Maximum total delay before retrying a provider rate limit, including ECA's one-second safety buffer. The delay is derived from `retry-after` or provider-specific reset data and defaults to a 60-second cap. When the total delay exceeds the cap, ECA gives up retrying and surfaces the reset time in the error."
+        },
+        "streamIdleTimeoutSeconds": {
+          "type": "integer",
+          "description": "Overrides the global streamIdleTimeoutSeconds for this provider.",
+          "markdownDescription": "Overrides the global `streamIdleTimeoutSeconds` for this provider."
         },
         "models": {
           "type": "object",
@@ -969,8 +1066,14 @@
         },
         "maxSteps": {
           "type": "integer",
-          "description": "Maximum number of tool-call steps before the agent is halted. Useful for limiting subagent execution.",
-          "markdownDescription": "Maximum number of tool-call steps before the agent is halted. Useful for limiting subagent execution.",
+          "description": "Maximum number of tool-call steps before the agent is halted and asked for a final summary. Useful for limiting subagent execution.",
+          "markdownDescription": "Maximum number of tool-call steps before the agent is halted and asked for a final summary. Useful for limiting subagent execution.",
+          "minimum": 1
+        },
+        "timeoutSeconds": {
+          "type": "integer",
+          "description": "Wall-clock limit in seconds for a subagent run. When reached, the subagent is stopped and asked for a final summary of its findings, with tool calls refused.",
+          "markdownDescription": "Wall-clock limit in seconds for a subagent run. When reached, the subagent is stopped and asked for a final summary of its findings, with tool calls refused.",
           "minimum": 1
         },
         "defaultModel": {
@@ -993,12 +1096,27 @@
             "type": "string"
           }
         },
+        "mcpToolSearch": {
+          "$ref": "#/definitions/mcpToolSearch"
+        },
         "autoCompactPercentage": {
           "type": "integer",
           "description": "Context window usage percentage at which auto-compact triggers for this agent.",
           "markdownDescription": "Context window usage percentage at which auto-compact triggers for this agent.",
           "minimum": 0,
           "maximum": 100
+        },
+        "autoCompactTokensLeft": {
+          "type": "integer",
+          "description": "Remaining context tokens at or below which auto-compact triggers for this agent. Takes precedence over autoCompactPercentage.",
+          "markdownDescription": "Remaining context tokens at or below which auto-compact triggers for this agent. Takes precedence over `autoCompactPercentage`.",
+          "minimum": 1
+        },
+        "autoCompactMaxPerTurn": {
+          "type": "integer",
+          "description": "Maximum number of auto-compactions in a single turn for this agent.",
+          "markdownDescription": "Maximum number of auto-compactions in a single turn for this agent.",
+          "minimum": 1
         },
         "toolCall": {
           "$ref": "#/definitions/toolCallConfig"
@@ -1179,6 +1297,41 @@
       },
       "additionalProperties": false
     },
+    "mcpToolSearch": {
+      "type": "object",
+      "description": "Keeps matching MCP tools out of the LLM context until it loads them with the eca__search_tools tool. Deferred tools are still listed by name and short description in the system prompt. ECA native tools are never deferred.",
+      "markdownDescription": "Keeps matching MCP tools out of the LLM context until it loads them with the `eca__search_tools` tool. Deferred tools are still listed by name and short description in the system prompt. ECA native tools are never deferred.",
+      "properties": {
+        "deferAllWhenTotalTokensExceedPercentOfContext": {
+          "type": ["number", "null"],
+          "description": "Percentage of the model context window the MCP tool definitions may take before all of them are put behind the search tool. For example 10 defers them once they exceed 10% of the context window. Null (the default) never defers automatically, leaving includePattern in control.",
+          "markdownDescription": "Percentage of the model context window the MCP tool definitions may take before all of them are put behind the search tool. For example `10` defers them once they exceed 10% of the context window. `null` (the default) never defers automatically, leaving `includePattern` in control.",
+          "default": null,
+          "minimum": 0,
+          "maximum": 100,
+          "examples": [10, 5]
+        },
+        "includePattern": {
+          "type": "array",
+          "description": "MCP tools to put behind the search tool regardless of deferAllWhenTotalTokensExceedPercentOfContext. Each entry matches an exact MCP server name (all its tools) or an anchored regex against the tool full name server__tool.",
+          "markdownDescription": "MCP tools to put behind the search tool regardless of `deferAllWhenTotalTokensExceedPercentOfContext`. Each entry matches an exact MCP server name (all its tools) or an anchored regex against the tool full name `server__tool`.",
+          "items": {
+            "type": "string"
+          },
+          "examples": [[".*"], ["some-mcp__.*"]]
+        },
+        "excludePattern": {
+          "type": "array",
+          "description": "MCP tools to keep loaded, taking precedence over both deferAllWhenTotalTokensExceedPercentOfContext and includePattern. Same matching as includePattern.",
+          "markdownDescription": "MCP tools to keep loaded, taking precedence over both `deferAllWhenTotalTokensExceedPercentOfContext` and `includePattern`. Same matching as `includePattern`.",
+          "items": {
+            "type": "string"
+          },
+          "examples": [["some-mcp"], ["some-mcp__.*"]]
+        }
+      },
+      "additionalProperties": false
+    },
     "toolCallConfig": {
       "type": "object",
       "description": "Tool call configuration including approval rules and tool-specific settings.",
@@ -1198,6 +1351,20 @@
               "description": "Maximum number of lines returned by read_file.",
               "markdownDescription": "Maximum number of lines returned by read_file.",
               "default": 2000
+            }
+          }
+        },
+        "askUser": {
+          "type": "object",
+          "description": "Configuration for the ask_user tool.",
+          "markdownDescription": "Configuration for the `ask_user` tool.",
+          "additionalProperties": false,
+          "properties": {
+            "trustModeTimeoutSeconds": {
+              "type": "integer",
+              "minimum": 1,
+              "description": "In trust mode only, seconds to wait for an answer. After that the LLM continues without one. Unset waits until the user answers.",
+              "markdownDescription": "In trust mode only, seconds to wait for an answer. After that the LLM continues without one. Unset waits until the user answers."
             }
           }
         },
@@ -1394,8 +1561,8 @@
         },
         "clientId": {
           "type": "string",
-          "description": "OAuth client ID for servers that require a pre-registered OAuth application (e.g. Databricks, Slack). When set, dynamic client registration is skipped.",
-          "markdownDescription": "OAuth client ID for servers that require a pre-registered OAuth application (e.g. Databricks, Slack). When set, dynamic client registration is skipped."
+          "description": "OAuth client ID for servers that require a pre-registered OAuth application (e.g. Databricks, Slack). When set, Client ID Metadata Document (CIMD) and dynamic client registration are skipped.",
+          "markdownDescription": "OAuth client ID for servers that require a pre-registered OAuth application (e.g. Databricks, Slack). When set, Client ID Metadata Document (CIMD) and dynamic client registration are skipped."
         },
         "clientSecret": {
           "type": "string",
@@ -1411,8 +1578,8 @@
         },
         "clientName": {
           "type": "string",
-          "description": "Override the client_name sent during OAuth Dynamic Client Registration. Required for servers that allowlist clients by name (e.g. Figma). Defaults to 'ECA (Editor Code Assistant)' when not set.",
-          "markdownDescription": "Override the `client_name` sent during OAuth Dynamic Client Registration. Required for servers that allowlist clients by name (e.g. Figma). Defaults to `ECA (Editor Code Assistant)` when not set."
+          "description": "Override the client_name sent during OAuth Dynamic Client Registration. Required for servers that allowlist clients by name (e.g. Figma). Defaults to 'ECA (Editor Code Assistant)' when not set. When set, Dynamic Client Registration is used even if the server supports Client ID Metadata Documents (CIMD).",
+          "markdownDescription": "Override the `client_name` sent during OAuth Dynamic Client Registration. Required for servers that allowlist clients by name (e.g. Figma). Defaults to `ECA (Editor Code Assistant)` when not set. When set, Dynamic Client Registration is used even if the server supports Client ID Metadata Documents (CIMD)."
         },
         "authScope": {
           "type": "string",
@@ -1464,8 +1631,8 @@
         },
         "tools": {
           "type": "object",
-          "description": "Custom descriptions for specific tools. Key is the tool name.",
-          "markdownDescription": "Custom descriptions for specific tools. Key is the tool name.",
+          "description": "Custom descriptions for specific tools. Key is the tool name. Runtime lists, like the available agents of eca__spawn_agent and the path-scoped rules of eca__fetch_rule, are still appended.",
+          "markdownDescription": "Custom descriptions for specific tools. Key is the tool name. Runtime lists, like the available agents of `eca__spawn_agent` and the path-scoped rules of `eca__fetch_rule`, are still appended.",
           "additionalProperties": {
             "type": "string"
           }

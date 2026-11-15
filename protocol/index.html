@@ -16,7 +16,7 @@
         <link rel="prev" href="../config/examples/">
       
       
-        <link rel="next" href="../troubleshooting/">
+        <link rel="next" href="../read-chat/">
       
       
       <link rel="icon" href="../images/logo.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Protocol - ECA - Editor Code Assistant</title>
+        <title>ECA Protocol - ECA - Editor Code Assistant</title>
       
     
     
@@ -42,10 +42,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&display=fallback">
     
       <link rel="stylesheet" href="../stylesheets/layout.css">
     
@@ -78,7 +80,7 @@
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Protocol - ECA - Editor Code Assistant" />
+  <meta property="og:title" content="ECA Protocol - ECA - Editor Code Assistant" />
   <meta property="og:description" content="ECA protocol specification: the standardized client-server protocol for connecting AI assistants to code editors." />
   <meta property="og:url" content="https://eca.dev/protocol/" />
   <meta property="og:image" content="https://eca.dev/images/og-image.png" />
@@ -88,7 +90,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Protocol - ECA - Editor Code Assistant" />
+  <meta name="twitter:title" content="ECA Protocol - ECA - Editor Code Assistant" />
   <meta name="twitter:description" content="ECA protocol specification: the standardized client-server protocol for connecting AI assistants to code editors." />
   <meta name="twitter:image" content="https://eca.dev/images/og-image.png" />
 
@@ -137,7 +139,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Protocol
+              ECA Protocol
             
           </span>
         </div>
@@ -221,18 +223,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href=".." class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
   
+  
+    
   
   Home
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -240,35 +241,17 @@
   
   
   
-  
     
-    
-      <li class="md-tabs__item">
-        <a href="../features/" class="md-tabs__link">
-          
-  
-  
-  Features
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
   
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../install/" class="md-tabs__link">
           
   
   
-  Install
+  Documentation
 
         </a>
       </li>
@@ -281,18 +264,36 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../config/introduction/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="/install/" class="md-tabs__link">
+        
   
+  
+    
+  
+  Install
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/config/introduction/" class="md-tabs__link">
+        
+  
+  
+    
   
   Configuration
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -300,11 +301,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="/protocol/" class="md-tabs__link">
         
   
   
@@ -323,7 +322,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../troubleshooting/" class="md-tabs__link">
+      <a href="/troubleshooting/" class="md-tabs__link">
         
   
   
@@ -424,27 +423,9 @@
   
   
   
-    
-    
-    
-    
-      
-      
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-            
   
   
   <span class="md-ellipsis">
@@ -453,13 +434,54 @@
   </span>
   
 
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_1">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Home
+            Documentation
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -470,12 +492,12 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    ECA - Free Open Source AI Pair Programming in Any Editor
+    Install
     
   </span>
   
@@ -485,58 +507,6 @@
   
 
               
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Features
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Features
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
             
               
                 
@@ -590,43 +560,11 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../read-chat/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Read Chat CLI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
     
     
     
     
       
-      
-        
       
     
     
@@ -634,87 +572,10 @@
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Install
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Install
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Install ECA
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
             
   
   
@@ -727,8 +588,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
             Configuration
           </label>
@@ -747,6 +608,29 @@
   
   <span class="md-ellipsis">
     Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../config/modules/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modules
     
   </span>
   
@@ -1177,9 +1061,10 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
     
@@ -1199,7 +1084,7 @@
   
   
   <span class="md-ellipsis">
-    Protocol
+    ECA Protocol
     
   </span>
   
@@ -1212,7 +1097,7 @@
   
   
   <span class="md-ellipsis">
-    Protocol
+    ECA Protocol
     
   </span>
   
@@ -1221,7 +1106,9 @@
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On This Page">
   
   
   
@@ -1230,7 +1117,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On This Page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -1298,7 +1185,7 @@
           <li class="md-nav__item">
   <a href="#initialize" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialize (↩️)
+      Initialize (↩)
     </span>
   </a>
   
@@ -1307,7 +1194,7 @@
           <li class="md-nav__item">
   <a href="#initialized" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialized (➡️)
+      Initialized (→)
     </span>
   </a>
   
@@ -1316,7 +1203,7 @@
           <li class="md-nav__item">
   <a href="#shutdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Shutdown (↩️)
+      Shutdown (↩)
     </span>
   </a>
   
@@ -1325,7 +1212,7 @@
           <li class="md-nav__item">
   <a href="#exit" class="md-nav__link">
     <span class="md-ellipsis">
-      Exit (➡️)
+      Exit (→)
     </span>
   </a>
   
@@ -1349,7 +1236,7 @@
           <li class="md-nav__item">
   <a href="#chat-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Prompt (↩️)
+      Chat Prompt (↩)
     </span>
   </a>
   
@@ -1358,7 +1245,7 @@
           <li class="md-nav__item">
   <a href="#chat-inline-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Inline Prompt (↩️)
+      Chat Inline Prompt (↩)
     </span>
   </a>
   
@@ -1367,7 +1254,7 @@
           <li class="md-nav__item">
   <a href="#chat-content-received" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Content Received (⬅️)
+      Chat Content Received (←)
     </span>
   </a>
   
@@ -1376,7 +1263,7 @@
           <li class="md-nav__item">
   <a href="#chat-approve-tool-call" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat approve tool call (➡️)
+      Chat approve tool call (→)
     </span>
   </a>
   
@@ -1385,7 +1272,7 @@
           <li class="md-nav__item">
   <a href="#chat-reject-tool-call" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat reject tool call (➡️)
+      Chat reject tool call (→)
     </span>
   </a>
   
@@ -1394,7 +1281,7 @@
           <li class="md-nav__item">
   <a href="#chat-query-context" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Query Context (↩️)
+      Chat Query Context (↩)
     </span>
   </a>
   
@@ -1403,7 +1290,7 @@
           <li class="md-nav__item">
   <a href="#chat-query-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Query Files (↩️)
+      Chat Query Files (↩)
     </span>
   </a>
   
@@ -1412,7 +1299,7 @@
           <li class="md-nav__item">
   <a href="#chat-query-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Query Commands (↩️)
+      Chat Query Commands (↩)
     </span>
   </a>
   
@@ -1421,7 +1308,7 @@
           <li class="md-nav__item">
   <a href="#chat-stop-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat stop prompt (➡️)
+      Chat stop prompt (→)
     </span>
   </a>
   
@@ -1430,7 +1317,7 @@
           <li class="md-nav__item">
   <a href="#chat-steer-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat steer prompt (➡️)
+      Chat steer prompt (→)
     </span>
   </a>
   
@@ -1439,7 +1326,7 @@
           <li class="md-nav__item">
   <a href="#chat-steer-prompt-remove" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat steer prompt remove (➡️)
+      Chat steer prompt remove (→)
     </span>
   </a>
   
@@ -1448,7 +1335,7 @@
           <li class="md-nav__item">
   <a href="#chat-rollback" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat rollback (↩️)
+      Chat rollback (↩)
     </span>
   </a>
   
@@ -1457,7 +1344,7 @@
           <li class="md-nav__item">
   <a href="#chat-clear" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat clear (↩️)
+      Chat clear (↩)
     </span>
   </a>
   
@@ -1466,7 +1353,7 @@
           <li class="md-nav__item">
   <a href="#chat-add-flag" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat add flag (➡️)
+      Chat add flag (→)
     </span>
   </a>
   
@@ -1475,7 +1362,7 @@
           <li class="md-nav__item">
   <a href="#chat-remove-flag" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat remove flag (➡️)
+      Chat remove flag (→)
     </span>
   </a>
   
@@ -1484,7 +1371,7 @@
           <li class="md-nav__item">
   <a href="#chat-fork" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat fork (➡️)
+      Chat fork (→)
     </span>
   </a>
   
@@ -1493,7 +1380,16 @@
           <li class="md-nav__item">
   <a href="#chat-cleared" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat cleared (⬅️)
+      Chat cleared (←)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-truncated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat truncated (←)
     </span>
   </a>
   
@@ -1502,7 +1398,7 @@
           <li class="md-nav__item">
   <a href="#chat-opened" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat opened (⬅️)
+      Chat opened (←)
     </span>
   </a>
   
@@ -1511,7 +1407,7 @@
           <li class="md-nav__item">
   <a href="#chat-status-changed" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat status changed (⬅️)
+      Chat status changed (←)
     </span>
   </a>
   
@@ -1520,7 +1416,7 @@
           <li class="md-nav__item">
   <a href="#chat-deleted" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat deleted (⬅️)
+      Chat deleted (←)
     </span>
   </a>
   
@@ -1529,7 +1425,7 @@
           <li class="md-nav__item">
   <a href="#chat-delete" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat delete (↩️)
+      Chat delete (↩)
     </span>
   </a>
   
@@ -1538,7 +1434,7 @@
           <li class="md-nav__item">
   <a href="#chat-update" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat update (↩️)
+      Chat update (↩)
     </span>
   </a>
   
@@ -1547,7 +1443,7 @@
           <li class="md-nav__item">
   <a href="#chat-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat list (↩️)
+      Chat list (↩)
     </span>
   </a>
   
@@ -1556,7 +1452,7 @@
           <li class="md-nav__item">
   <a href="#chat-open" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat open (↩️)
+      Chat open (↩)
     </span>
   </a>
   
@@ -1565,7 +1461,7 @@
           <li class="md-nav__item">
   <a href="#chat-history" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat history (↩️)
+      Chat history (↩)
     </span>
   </a>
   
@@ -1574,7 +1470,7 @@
           <li class="md-nav__item">
   <a href="#chat-selected-agent-changed" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat selected agent changed (➡️)
+      Chat selected agent changed (→)
     </span>
   </a>
   
@@ -1583,7 +1479,7 @@
           <li class="md-nav__item">
   <a href="#chat-selected-model-changed" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat selected model changed (➡️)
+      Chat selected model changed (→)
     </span>
   </a>
   
@@ -1592,7 +1488,7 @@
           <li class="md-nav__item">
   <a href="#editor-diagnostics" class="md-nav__link">
     <span class="md-ellipsis">
-      Editor diagnostics (↪️)
+      Editor diagnostics (↪)
     </span>
   </a>
   
@@ -1601,7 +1497,7 @@
           <li class="md-nav__item">
   <a href="#editor-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Editor definition (↪️)
+      Editor definition (↪)
     </span>
   </a>
   
@@ -1610,7 +1506,7 @@
           <li class="md-nav__item">
   <a href="#editor-references" class="md-nav__link">
     <span class="md-ellipsis">
-      Editor references (↪️)
+      Editor references (↪)
     </span>
   </a>
   
@@ -1619,7 +1515,7 @@
           <li class="md-nav__item">
   <a href="#chat-ask-question" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat ask question (↪️)
+      Chat ask question (↪)
     </span>
   </a>
   
@@ -1628,7 +1524,7 @@
           <li class="md-nav__item">
   <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
-      Completion (↩️)
+      Completion (↩)
     </span>
   </a>
   
@@ -1637,7 +1533,7 @@
           <li class="md-nav__item">
   <a href="#rewrite" class="md-nav__link">
     <span class="md-ellipsis">
-      Rewrite (↩️)
+      Rewrite (↩)
     </span>
   </a>
   
@@ -1646,7 +1542,7 @@
           <li class="md-nav__item">
   <a href="#rewrite-content-received" class="md-nav__link">
     <span class="md-ellipsis">
-      Rewrite Content Received (⬅️)
+      Rewrite Content Received (←)
     </span>
   </a>
   
@@ -1670,7 +1566,7 @@
           <li class="md-nav__item">
   <a href="#config-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Config updated (⬅️)
+      Config updated (←)
     </span>
   </a>
   
@@ -1679,7 +1575,7 @@
           <li class="md-nav__item">
   <a href="#tool-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Tool updated (⬅️)
+      Tool updated (←)
     </span>
   </a>
   
@@ -1688,7 +1584,7 @@
           <li class="md-nav__item">
   <a href="#tool-server-removed" class="md-nav__link">
     <span class="md-ellipsis">
-      Tool server removed (⬅️)
+      Tool server removed (←)
     </span>
   </a>
   
@@ -1697,7 +1593,7 @@
           <li class="md-nav__item">
   <a href="#stop-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Stop MCP server (➡️)
+      Stop MCP server (→)
     </span>
   </a>
   
@@ -1706,7 +1602,7 @@
           <li class="md-nav__item">
   <a href="#start-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Start MCP server (➡️)
+      Start MCP server (→)
     </span>
   </a>
   
@@ -1715,7 +1611,7 @@
           <li class="md-nav__item">
   <a href="#connect-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Connect MCP server (➡️)
+      Connect MCP server (→)
     </span>
   </a>
   
@@ -1724,7 +1620,7 @@
           <li class="md-nav__item">
   <a href="#logout-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Logout MCP server (➡️)
+      Logout MCP server (→)
     </span>
   </a>
   
@@ -1733,7 +1629,7 @@
           <li class="md-nav__item">
   <a href="#disable-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable MCP server (➡️)
+      Disable MCP server (→)
     </span>
   </a>
   
@@ -1742,7 +1638,7 @@
           <li class="md-nav__item">
   <a href="#enable-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Enable MCP server (➡️)
+      Enable MCP server (→)
     </span>
   </a>
   
@@ -1751,7 +1647,7 @@
           <li class="md-nav__item">
   <a href="#update-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Update MCP Server (↩️)
+      Update MCP Server (↩)
     </span>
   </a>
   
@@ -1760,7 +1656,7 @@
           <li class="md-nav__item">
   <a href="#add-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Add MCP Server (↩️)
+      Add MCP Server (↩)
     </span>
   </a>
   
@@ -1769,7 +1665,7 @@
           <li class="md-nav__item">
   <a href="#remove-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove MCP Server (↩️)
+      Remove MCP Server (↩)
     </span>
   </a>
   
@@ -1793,7 +1689,7 @@
           <li class="md-nav__item">
   <a href="#list-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      List Providers (↩️)
+      List Providers (↩)
     </span>
   </a>
   
@@ -1802,7 +1698,7 @@
           <li class="md-nav__item">
   <a href="#login-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Login Provider (↩️)
+      Login Provider (↩)
     </span>
   </a>
   
@@ -1811,7 +1707,7 @@
           <li class="md-nav__item">
   <a href="#login-provider-input" class="md-nav__link">
     <span class="md-ellipsis">
-      Login Provider Input (↩️)
+      Login Provider Input (↩)
     </span>
   </a>
   
@@ -1820,7 +1716,7 @@
           <li class="md-nav__item">
   <a href="#logout-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Logout Provider (↩️)
+      Logout Provider (↩)
     </span>
   </a>
   
@@ -1829,7 +1725,7 @@
           <li class="md-nav__item">
   <a href="#provider-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Provider Updated (⬅️)
+      Provider Updated (←)
     </span>
   </a>
   
@@ -1853,7 +1749,7 @@
           <li class="md-nav__item">
   <a href="#list-jobs" class="md-nav__link">
     <span class="md-ellipsis">
-      List Jobs (↩️)
+      List Jobs (↩)
     </span>
   </a>
   
@@ -1862,7 +1758,7 @@
           <li class="md-nav__item">
   <a href="#kill-job" class="md-nav__link">
     <span class="md-ellipsis">
-      Kill Job (↩️)
+      Kill Job (↩)
     </span>
   </a>
   
@@ -1871,7 +1767,7 @@
           <li class="md-nav__item">
   <a href="#read-job-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Read Job Output (↩️)
+      Read Job Output (↩)
     </span>
   </a>
   
@@ -1880,7 +1776,7 @@
           <li class="md-nav__item">
   <a href="#jobs-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Jobs Updated (⬅️)
+      Jobs Updated (←)
     </span>
   </a>
   
@@ -1904,7 +1800,7 @@
           <li class="md-nav__item">
   <a href="#progress" class="md-nav__link">
     <span class="md-ellipsis">
-      progress (⬅️)
+      progress (←)
     </span>
   </a>
   
@@ -1913,7 +1809,7 @@
           <li class="md-nav__item">
   <a href="#showmessage" class="md-nav__link">
     <span class="md-ellipsis">
-      showMessage (⬅️)
+      showMessage (←)
     </span>
   </a>
   
@@ -1931,6 +1827,60 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../read-chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    read-chat CLI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
       
@@ -1939,7 +1889,73 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="/install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/config/introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/protocol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Protocol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/troubleshooting/" class="md-nav__link">
         
   
   
@@ -2011,7 +2027,9 @@
                   <div class="md-sidebar__inner">
                     
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On This Page">
   
   
   
@@ -2020,7 +2038,7 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      On This Page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
@@ -2088,7 +2106,7 @@
           <li class="md-nav__item">
   <a href="#initialize" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialize (↩️)
+      Initialize (↩)
     </span>
   </a>
   
@@ -2097,7 +2115,7 @@
           <li class="md-nav__item">
   <a href="#initialized" class="md-nav__link">
     <span class="md-ellipsis">
-      Initialized (➡️)
+      Initialized (→)
     </span>
   </a>
   
@@ -2106,7 +2124,7 @@
           <li class="md-nav__item">
   <a href="#shutdown" class="md-nav__link">
     <span class="md-ellipsis">
-      Shutdown (↩️)
+      Shutdown (↩)
     </span>
   </a>
   
@@ -2115,7 +2133,7 @@
           <li class="md-nav__item">
   <a href="#exit" class="md-nav__link">
     <span class="md-ellipsis">
-      Exit (➡️)
+      Exit (→)
     </span>
   </a>
   
@@ -2139,7 +2157,7 @@
           <li class="md-nav__item">
   <a href="#chat-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Prompt (↩️)
+      Chat Prompt (↩)
     </span>
   </a>
   
@@ -2148,7 +2166,7 @@
           <li class="md-nav__item">
   <a href="#chat-inline-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Inline Prompt (↩️)
+      Chat Inline Prompt (↩)
     </span>
   </a>
   
@@ -2157,7 +2175,7 @@
           <li class="md-nav__item">
   <a href="#chat-content-received" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Content Received (⬅️)
+      Chat Content Received (←)
     </span>
   </a>
   
@@ -2166,7 +2184,7 @@
           <li class="md-nav__item">
   <a href="#chat-approve-tool-call" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat approve tool call (➡️)
+      Chat approve tool call (→)
     </span>
   </a>
   
@@ -2175,7 +2193,7 @@
           <li class="md-nav__item">
   <a href="#chat-reject-tool-call" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat reject tool call (➡️)
+      Chat reject tool call (→)
     </span>
   </a>
   
@@ -2184,7 +2202,7 @@
           <li class="md-nav__item">
   <a href="#chat-query-context" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Query Context (↩️)
+      Chat Query Context (↩)
     </span>
   </a>
   
@@ -2193,7 +2211,7 @@
           <li class="md-nav__item">
   <a href="#chat-query-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Query Files (↩️)
+      Chat Query Files (↩)
     </span>
   </a>
   
@@ -2202,7 +2220,7 @@
           <li class="md-nav__item">
   <a href="#chat-query-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat Query Commands (↩️)
+      Chat Query Commands (↩)
     </span>
   </a>
   
@@ -2211,7 +2229,7 @@
           <li class="md-nav__item">
   <a href="#chat-stop-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat stop prompt (➡️)
+      Chat stop prompt (→)
     </span>
   </a>
   
@@ -2220,7 +2238,7 @@
           <li class="md-nav__item">
   <a href="#chat-steer-prompt" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat steer prompt (➡️)
+      Chat steer prompt (→)
     </span>
   </a>
   
@@ -2229,7 +2247,7 @@
           <li class="md-nav__item">
   <a href="#chat-steer-prompt-remove" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat steer prompt remove (➡️)
+      Chat steer prompt remove (→)
     </span>
   </a>
   
@@ -2238,7 +2256,7 @@
           <li class="md-nav__item">
   <a href="#chat-rollback" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat rollback (↩️)
+      Chat rollback (↩)
     </span>
   </a>
   
@@ -2247,7 +2265,7 @@
           <li class="md-nav__item">
   <a href="#chat-clear" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat clear (↩️)
+      Chat clear (↩)
     </span>
   </a>
   
@@ -2256,7 +2274,7 @@
           <li class="md-nav__item">
   <a href="#chat-add-flag" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat add flag (➡️)
+      Chat add flag (→)
     </span>
   </a>
   
@@ -2265,7 +2283,7 @@
           <li class="md-nav__item">
   <a href="#chat-remove-flag" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat remove flag (➡️)
+      Chat remove flag (→)
     </span>
   </a>
   
@@ -2274,7 +2292,7 @@
           <li class="md-nav__item">
   <a href="#chat-fork" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat fork (➡️)
+      Chat fork (→)
     </span>
   </a>
   
@@ -2283,7 +2301,16 @@
           <li class="md-nav__item">
   <a href="#chat-cleared" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat cleared (⬅️)
+      Chat cleared (←)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chat-truncated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chat truncated (←)
     </span>
   </a>
   
@@ -2292,7 +2319,7 @@
           <li class="md-nav__item">
   <a href="#chat-opened" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat opened (⬅️)
+      Chat opened (←)
     </span>
   </a>
   
@@ -2301,7 +2328,7 @@
           <li class="md-nav__item">
   <a href="#chat-status-changed" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat status changed (⬅️)
+      Chat status changed (←)
     </span>
   </a>
   
@@ -2310,7 +2337,7 @@
           <li class="md-nav__item">
   <a href="#chat-deleted" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat deleted (⬅️)
+      Chat deleted (←)
     </span>
   </a>
   
@@ -2319,7 +2346,7 @@
           <li class="md-nav__item">
   <a href="#chat-delete" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat delete (↩️)
+      Chat delete (↩)
     </span>
   </a>
   
@@ -2328,7 +2355,7 @@
           <li class="md-nav__item">
   <a href="#chat-update" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat update (↩️)
+      Chat update (↩)
     </span>
   </a>
   
@@ -2337,7 +2364,7 @@
           <li class="md-nav__item">
   <a href="#chat-list" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat list (↩️)
+      Chat list (↩)
     </span>
   </a>
   
@@ -2346,7 +2373,7 @@
           <li class="md-nav__item">
   <a href="#chat-open" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat open (↩️)
+      Chat open (↩)
     </span>
   </a>
   
@@ -2355,7 +2382,7 @@
           <li class="md-nav__item">
   <a href="#chat-history" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat history (↩️)
+      Chat history (↩)
     </span>
   </a>
   
@@ -2364,7 +2391,7 @@
           <li class="md-nav__item">
   <a href="#chat-selected-agent-changed" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat selected agent changed (➡️)
+      Chat selected agent changed (→)
     </span>
   </a>
   
@@ -2373,7 +2400,7 @@
           <li class="md-nav__item">
   <a href="#chat-selected-model-changed" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat selected model changed (➡️)
+      Chat selected model changed (→)
     </span>
   </a>
   
@@ -2382,7 +2409,7 @@
           <li class="md-nav__item">
   <a href="#editor-diagnostics" class="md-nav__link">
     <span class="md-ellipsis">
-      Editor diagnostics (↪️)
+      Editor diagnostics (↪)
     </span>
   </a>
   
@@ -2391,7 +2418,7 @@
           <li class="md-nav__item">
   <a href="#editor-definition" class="md-nav__link">
     <span class="md-ellipsis">
-      Editor definition (↪️)
+      Editor definition (↪)
     </span>
   </a>
   
@@ -2400,7 +2427,7 @@
           <li class="md-nav__item">
   <a href="#editor-references" class="md-nav__link">
     <span class="md-ellipsis">
-      Editor references (↪️)
+      Editor references (↪)
     </span>
   </a>
   
@@ -2409,7 +2436,7 @@
           <li class="md-nav__item">
   <a href="#chat-ask-question" class="md-nav__link">
     <span class="md-ellipsis">
-      Chat ask question (↪️)
+      Chat ask question (↪)
     </span>
   </a>
   
@@ -2418,7 +2445,7 @@
           <li class="md-nav__item">
   <a href="#completion" class="md-nav__link">
     <span class="md-ellipsis">
-      Completion (↩️)
+      Completion (↩)
     </span>
   </a>
   
@@ -2427,7 +2454,7 @@
           <li class="md-nav__item">
   <a href="#rewrite" class="md-nav__link">
     <span class="md-ellipsis">
-      Rewrite (↩️)
+      Rewrite (↩)
     </span>
   </a>
   
@@ -2436,7 +2463,7 @@
           <li class="md-nav__item">
   <a href="#rewrite-content-received" class="md-nav__link">
     <span class="md-ellipsis">
-      Rewrite Content Received (⬅️)
+      Rewrite Content Received (←)
     </span>
   </a>
   
@@ -2460,7 +2487,7 @@
           <li class="md-nav__item">
   <a href="#config-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Config updated (⬅️)
+      Config updated (←)
     </span>
   </a>
   
@@ -2469,7 +2496,7 @@
           <li class="md-nav__item">
   <a href="#tool-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Tool updated (⬅️)
+      Tool updated (←)
     </span>
   </a>
   
@@ -2478,7 +2505,7 @@
           <li class="md-nav__item">
   <a href="#tool-server-removed" class="md-nav__link">
     <span class="md-ellipsis">
-      Tool server removed (⬅️)
+      Tool server removed (←)
     </span>
   </a>
   
@@ -2487,7 +2514,7 @@
           <li class="md-nav__item">
   <a href="#stop-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Stop MCP server (➡️)
+      Stop MCP server (→)
     </span>
   </a>
   
@@ -2496,7 +2523,7 @@
           <li class="md-nav__item">
   <a href="#start-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Start MCP server (➡️)
+      Start MCP server (→)
     </span>
   </a>
   
@@ -2505,7 +2532,7 @@
           <li class="md-nav__item">
   <a href="#connect-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Connect MCP server (➡️)
+      Connect MCP server (→)
     </span>
   </a>
   
@@ -2514,7 +2541,7 @@
           <li class="md-nav__item">
   <a href="#logout-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Logout MCP server (➡️)
+      Logout MCP server (→)
     </span>
   </a>
   
@@ -2523,7 +2550,7 @@
           <li class="md-nav__item">
   <a href="#disable-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable MCP server (➡️)
+      Disable MCP server (→)
     </span>
   </a>
   
@@ -2532,7 +2559,7 @@
           <li class="md-nav__item">
   <a href="#enable-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Enable MCP server (➡️)
+      Enable MCP server (→)
     </span>
   </a>
   
@@ -2541,7 +2568,7 @@
           <li class="md-nav__item">
   <a href="#update-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Update MCP Server (↩️)
+      Update MCP Server (↩)
     </span>
   </a>
   
@@ -2550,7 +2577,7 @@
           <li class="md-nav__item">
   <a href="#add-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Add MCP Server (↩️)
+      Add MCP Server (↩)
     </span>
   </a>
   
@@ -2559,7 +2586,7 @@
           <li class="md-nav__item">
   <a href="#remove-mcp-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove MCP Server (↩️)
+      Remove MCP Server (↩)
     </span>
   </a>
   
@@ -2583,7 +2610,7 @@
           <li class="md-nav__item">
   <a href="#list-providers" class="md-nav__link">
     <span class="md-ellipsis">
-      List Providers (↩️)
+      List Providers (↩)
     </span>
   </a>
   
@@ -2592,7 +2619,7 @@
           <li class="md-nav__item">
   <a href="#login-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Login Provider (↩️)
+      Login Provider (↩)
     </span>
   </a>
   
@@ -2601,7 +2628,7 @@
           <li class="md-nav__item">
   <a href="#login-provider-input" class="md-nav__link">
     <span class="md-ellipsis">
-      Login Provider Input (↩️)
+      Login Provider Input (↩)
     </span>
   </a>
   
@@ -2610,7 +2637,7 @@
           <li class="md-nav__item">
   <a href="#logout-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Logout Provider (↩️)
+      Logout Provider (↩)
     </span>
   </a>
   
@@ -2619,7 +2646,7 @@
           <li class="md-nav__item">
   <a href="#provider-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Provider Updated (⬅️)
+      Provider Updated (←)
     </span>
   </a>
   
@@ -2643,7 +2670,7 @@
           <li class="md-nav__item">
   <a href="#list-jobs" class="md-nav__link">
     <span class="md-ellipsis">
-      List Jobs (↩️)
+      List Jobs (↩)
     </span>
   </a>
   
@@ -2652,7 +2679,7 @@
           <li class="md-nav__item">
   <a href="#kill-job" class="md-nav__link">
     <span class="md-ellipsis">
-      Kill Job (↩️)
+      Kill Job (↩)
     </span>
   </a>
   
@@ -2661,7 +2688,7 @@
           <li class="md-nav__item">
   <a href="#read-job-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Read Job Output (↩️)
+      Read Job Output (↩)
     </span>
   </a>
   
@@ -2670,7 +2697,7 @@
           <li class="md-nav__item">
   <a href="#jobs-updated" class="md-nav__link">
     <span class="md-ellipsis">
-      Jobs Updated (⬅️)
+      Jobs Updated (←)
     </span>
   </a>
   
@@ -2694,7 +2721,7 @@
           <li class="md-nav__item">
   <a href="#progress" class="md-nav__link">
     <span class="md-ellipsis">
-      progress (⬅️)
+      progress (←)
     </span>
   </a>
   
@@ -2703,7 +2730,7 @@
           <li class="md-nav__item">
   <a href="#showmessage" class="md-nav__link">
     <span class="md-ellipsis">
-      showMessage (⬅️)
+      showMessage (←)
     </span>
   </a>
   
@@ -2842,7 +2869,7 @@ separated by a <code>\r\n</code>.</p>
 <span class="w">   </span><span class="p">};</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="initialize">Initialize (↩️)<a class="headerlink" href="#initialize" title="Permanent link">#</a></h3>
+<h3 id="initialize">Initialize (↩)<a class="headerlink" href="#initialize" title="Permanent link">#</a></h3>
 <p>The first request sent from client to server. This message:
 - Establishes the connection
 - Allows the server to index the project
@@ -2878,14 +2905,11 @@ separated by a <code>\r\n</code>.</p>
 <span class="w">    </span><span class="p">};</span>
 
 <span class="w">    </span><span class="cm">/**</span>
-<span class="cm">     * User provided initialization options.</span>
+<span class="cm">     * User provided initialization options: ECA config, merged with the other</span>
+<span class="cm">     * config sources (see https://eca.dev/config/introduction). Clients may</span>
+<span class="cm">     * also send settings of their own here, which ECA ignores.</span>
 <span class="cm">     */</span>
-<span class="w">    </span><span class="nx">initializationOptions</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="cm">/*</span>
-<span class="cm">         * The chat agent.</span>
-<span class="cm">         */</span>
-<span class="w">         </span><span class="nx">chatAgent?</span><span class="o">:</span><span class="w"> </span><span class="kt">ChatAgent</span><span class="p">;</span>
-<span class="w">    </span><span class="p">};</span>
+<span class="w">    </span><span class="nx">initializationOptions?</span><span class="o">:</span><span class="w"> </span><span class="kt">object</span><span class="p">;</span>
 
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * The capabilities provided by the client (editor or tool)</span>
@@ -2959,6 +2983,24 @@ separated by a <code>\r\n</code>.</p>
 <span class="cm">             * during a chat session.</span>
 <span class="cm">             */</span>
 <span class="w">            </span><span class="nx">askQuestion?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
+
+<span class="w">            </span><span class="cm">/**</span>
+<span class="cm">             * Present when the client applies chat history changes in place</span>
+<span class="cm">             * instead of needing a full `chat/cleared` + replay. Then</span>
+<span class="cm">             * `chat/rollback` emits `chat/truncated`, `chat/addFlag` emits a</span>
+<span class="cm">             * single flag `chat/contentReceived` carrying `afterContentId`, and</span>
+<span class="cm">             * chats the server creates (`/fork`, `/btw`, `chat/fork`) stream</span>
+<span class="cm">             * only their newest messages, with `chat/opened` `history`</span>
+<span class="cm">             * describing the rest. Remote (SSE) clients keep receiving the</span>
+<span class="cm">             * full replays.</span>
+<span class="cm">             */</span>
+<span class="w">            </span><span class="nx">incrementalUpdates</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="cm">/**</span>
+<span class="cm">                 * Max messages to stream into a chat the server creates.</span>
+<span class="cm">                 * Defaults to 50.</span>
+<span class="cm">                 */</span>
+<span class="w">                </span><span class="nx">historyPageSize?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">            </span><span class="p">};</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
@@ -2977,9 +3019,18 @@ separated by a <code>\r\n</code>.</p>
 <span class="cm">     * Optional welcome message configured by the user to show when starting a new chat.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">chatWelcomeMessage?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Absolute path of the global config file the server reads</span>
+<span class="cm">     * (`$XDG_CONFIG_HOME/eca/config.json` or `~/.config/eca/config.json`).</span>
+<span class="cm">     * Clients should use it instead of computing the path themselves,</span>
+<span class="cm">     * since the resolution of the home directory may differ between</span>
+<span class="cm">     * the client and the server (e.g. on Windows).</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">globalConfigPath?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="initialized">Initialized (➡️)<a class="headerlink" href="#initialized" title="Permanent link">#</a></h3>
+<h3 id="initialized">Initialized (→)<a class="headerlink" href="#initialized" title="Permanent link">#</a></h3>
 <p>A notification sent from the client to the server after receiving the initialize response. This message:
 - Confirms that the client is ready to receive requests
 - Signals that the server can start sending notifications
@@ -2991,7 +3042,7 @@ separated by a <code>\r\n</code>.</p>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">InitializedParams</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<h3 id="shutdown">Shutdown (↩️)<a class="headerlink" href="#shutdown" title="Permanent link">#</a></h3>
+<h3 id="shutdown">Shutdown (↩)<a class="headerlink" href="#shutdown" title="Permanent link">#</a></h3>
 <p>A request sent from the client to the server to gracefully shut down the connection. This message:
 - Allows the server to clean up resources
 - Ensures all pending operations are completed
@@ -3006,7 +3057,7 @@ separated by a <code>\r\n</code>.</p>
 <li>result: null</li>
 <li>error: code and message set in case an exception happens during shutdown request.</li>
 </ul>
-<h3 id="exit">Exit (➡️)<a class="headerlink" href="#exit" title="Permanent link">#</a></h3>
+<h3 id="exit">Exit (→)<a class="headerlink" href="#exit" title="Permanent link">#</a></h3>
 <p>A notification sent from the client to the server to terminate the connection. This message:
 - Should be sent after a shutdown request
 - Signals the server to exit its process
@@ -3072,7 +3123,7 @@ separated by a <code>\r\n</code>.</p>
 </div>
 </div>
 </div>
-<h3 id="chat-prompt">Chat Prompt (↩️)<a class="headerlink" href="#chat-prompt" title="Permanent link">#</a></h3>
+<h3 id="chat-prompt">Chat Prompt (↩)<a class="headerlink" href="#chat-prompt" title="Permanent link">#</a></h3>
 <p>A request sent from client to server, starting or continuing a chat in natural language as an agent.
 Used for broader questions or continuous discussion of project/files.</p>
 <p><em>Request:</em> </p>
@@ -3148,6 +3199,11 @@ Used for broader questions or continuous discussion of project/files.</p>
 
 <span class="cm">/**</span>
 <span class="cm"> * Context related to a file in the workspace</span>
+<span class="cm"> * The server delivers it in the user message (not the system prompt): its full</span>
+<span class="cm"> * content the first time it&#39;s sent in a chat (or after compaction, clear or</span>
+<span class="cm"> * rollback), a one-line notice when its content changes and nothing once</span>
+<span class="cm"> * clients stop sending it or the prompt text already expands it via `@path`.</span>
+<span class="cm"> * Clients should send the attached contexts on every prompt.</span>
 <span class="cm"> */</span>
 <span class="kd">interface</span><span class="w"> </span><span class="nx">FileContext</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;file&#39;</span><span class="p">;</span>
@@ -3169,6 +3225,7 @@ Used for broader questions or continuous discussion of project/files.</p>
 
 <span class="cm">/**</span>
 <span class="cm"> * Context related to a directory in the workspace</span>
+<span class="cm"> * The server expands it into its files, each delivered like a `FileContext`.</span>
 <span class="cm"> */</span>
 <span class="kd">interface</span><span class="w"> </span><span class="nx">DirectoryContext</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;directory&#39;</span><span class="p">;</span>
@@ -3238,6 +3295,8 @@ Used for broader questions or continuous discussion of project/files.</p>
 <span class="cm"> * Context about the workspaces repo-map, automatically calculated by server.</span>
 <span class="cm"> * Clients should include this to chat by default but users may want exclude </span>
 <span class="cm"> * this context to reduce context size if needed.</span>
+<span class="cm"> * The server delivers it in the user message like `FileContext`: in full once,</span>
+<span class="cm"> * then a one-line notice when the workspace structure changes.</span>
 <span class="cm"> *</span>
 <span class="cm"> * @deprecated No longer needed, replaced by eca__directory_tree tool.</span>
 <span class="cm"> */</span>
@@ -3325,7 +3384,7 @@ Used for broader questions or continuous discussion of project/files.</p>
 <span class="w">    </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;prompting&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;login&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;error&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-inline-prompt">Chat Inline Prompt (↩️)<a class="headerlink" href="#chat-inline-prompt" title="Permanent link">#</a></h3>
+<h3 id="chat-inline-prompt">Chat Inline Prompt (↩)<a class="headerlink" href="#chat-inline-prompt" title="Permanent link">#</a></h3>
 <p>A request sent from client to server for prompts whose answer is rendered inline
 in the editor (e.g. an overlay or inlay near the cursor) while being backed by a
 regular chat session. The response streams via the usual <code>chat/contentReceived</code>
@@ -3381,7 +3440,7 @@ all behave like any other chat.</p>
 <span class="p">}</span>
 </code></pre></div>
 <p><em>Response:</em> <code>ChatPromptResponse</code></p>
-<h3 id="chat-content-received">Chat Content Received (⬅️)<a class="headerlink" href="#chat-content-received" title="Permanent link">#</a></h3>
+<h3 id="chat-content-received">Chat Content Received (←)<a class="headerlink" href="#chat-content-received" title="Permanent link">#</a></h3>
 <p>A server notification with a new content returned from the LLM or server.</p>
 <p><em>Notification:</em> </p>
 <ul>
@@ -3444,7 +3503,8 @@ all behave like any other chat.</p>
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * The unique identifier of this content.</span>
 <span class="cm">     * Mostly used to rollback messages.</span>
-<span class="cm">     * Current, only user messages contain this.</span>
+<span class="cm">     * Currently, only user messages contain this, though not all of them</span>
+<span class="cm">     * (e.g. a compaction summary has none).</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">contentId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 
@@ -3471,11 +3531,29 @@ all behave like any other chat.</p>
 <span class="cm">     * May be omitted when state is &#39;finished&#39;.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">text?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Only when state is &#39;finished&#39;: present when the turn ended because</span>
+<span class="cm">     * of an error (a provider or network error, a context overflow…),</span>
+<span class="cm">     * which was also shown in the chat as text. Absent when it succeeded.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">error</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">        </span><span class="cm">/**</span>
+<span class="cm">         * The kind of error, e.g. &#39;network&#39;, &#39;overloaded&#39;, &#39;rate-limited&#39;,</span>
+<span class="cm">         * &#39;quota-exhausted&#39;, &#39;auth&#39;, &#39;context-overflow&#39;, &#39;unknown&#39;.</span>
+<span class="cm">         */</span>
+<span class="w">        </span><span class="kr">type</span><span class="nx">?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="p">};</span>
 <span class="p">}</span>
 
 <span class="cm">/**</span>
 <span class="cm"> * A reason started from the LLM</span>
 <span class="cm"> *</span>
+<span class="cm"> * Consecutive reasoning blocks with no other visible content between them</span>
+<span class="cm"> * are merged by the server into a single reason: one id, texts joined by a</span>
+<span class="cm"> * blank line and a single `reasonFinished` with the summed time, sent right</span>
+<span class="cm"> * before the next visible content or when the prompt finishes.</span>
 <span class="cm"> */</span>
 <span class="kd">interface</span><span class="w"> </span><span class="nx">ChatReasonStartedContent</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;reasonStarted&#39;</span><span class="p">;</span>
@@ -3644,14 +3722,40 @@ all behave like any other chat.</p>
 <span class="w">    </span><span class="nx">sessionTokens</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 
 <span class="w">    </span><span class="cm">/**</span>
-<span class="cm">     * The cost of the last sent message summing input + output tokens.</span>
+<span class="cm">     * Output tokens per second of the last model response, rounded to an</span>
+<span class="cm">     * integer. Measured from the first generated token to the end of the</span>
+<span class="cm">     * response. Includes reasoning tokens when the provider counts them as</span>
+<span class="cm">     * output and server-side tool waits such as web search. Excludes client</span>
+<span class="cm">     * tool execution and approval waits. Absent for non-streaming requests or</span>
+<span class="cm">     * when usage or timing is unknown.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">messageOutputTps?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The cost of the last sent message summing input + output tokens, in</span>
+<span class="cm">     * USD with 2 decimals, or 2 significant digits below one cent (e.g.</span>
+<span class="cm">     * `0.0012`).</span>
+<span class="cm">     * Absent when the model has no pricing or the chat uses a subscription</span>
+<span class="cm">     * login (see `quota`).</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">lastMessageCost?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span>
 
 <span class="w">    </span><span class="cm">/**</span>
-<span class="cm">     * The cost of the whole chat session so far.</span>
+<span class="cm">     * The cost of the whole chat session so far, formatted like</span>
+<span class="cm">     * `lastMessageCost`.</span>
+<span class="cm">     * Absent when the model has no pricing or the chat uses a subscription</span>
+<span class="cm">     * login (see `quota`).</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">sessionCost?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Subscription quota of the provider behind the chat&#39;s model, sent instead</span>
+<span class="cm">     * of the costs when logged in with a subscription (Claude Pro/Max, ChatGPT,</span>
+<span class="cm">     * GitHub Copilot), as the provider has no per-token cost. Absent until the</span>
+<span class="cm">     * provider reports it. Same value as the provider&#39;s `ProviderStatus.quota`</span>
+<span class="cm">     * when this usage was sent.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">quota?</span><span class="o">:</span><span class="w"> </span><span class="kt">ProviderQuota</span><span class="p">;</span>
 
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * Information about limits.</span>
@@ -3670,8 +3774,9 @@ all behave like any other chat.</p>
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * The percentage of the model context window at which the server will</span>
 <span class="cm">     * automatically compact (summarize) the conversation. Absent when</span>
-<span class="cm">     * auto-compaction is disabled. Clients can render it as a threshold</span>
-<span class="cm">     * marker on the usage bar.</span>
+<span class="cm">     * auto-compaction is disabled. When `autoCompactTokensLeft` is configured</span>
+<span class="cm">     * this is its equivalent percentage for the current model. Clients can</span>
+<span class="cm">     * render it as a threshold marker on the usage bar.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">autoCompactPercentage?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 
@@ -3815,7 +3920,10 @@ all behave like any other chat.</p>
 <span class="p">}</span>
 
 <span class="cm">/**</span>
-<span class="cm"> * Tool call that server is running to report to LLM later, sent once per id.</span>
+<span class="cm"> * Tool call that server is running to report to LLM later.</span>
+<span class="cm"> * First sent when the call starts; may be sent again for the same id while it</span>
+<span class="cm"> * runs (e.g. with updated `progress`, or subagent step `details`), so clients</span>
+<span class="cm"> * should update the existing tool call rather than add a new one.</span>
 <span class="cm"> */</span>
 <span class="kd">interface</span><span class="w"> </span><span class="nx">ChatToolCallRunningContent</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;toolCallRunning&#39;</span><span class="p">;</span>
@@ -3853,6 +3961,32 @@ all behave like any other chat.</p>
 <span class="cm">     * Clients may use this to present different UX for this tool call.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">details?</span><span class="o">:</span><span class="w"> </span><span class="kt">ToolCallDetails</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Latest progress reported by the tool while running, mirroring MCP&#39;s</span>
+<span class="cm">     * `notifications/progress`. Sent at most about once per second per call.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">progress?</span><span class="o">:</span><span class="w"> </span><span class="kt">ToolCallProgress</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Progress of a running tool call, mirroring MCP&#39;s progress notification params.</span>
+<span class="cm"> */</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ToolCallProgress</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The progress so far; increases with each report, even if `total` is unknown.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">progress</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Total progress required, if known.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">total?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Description of the current progress.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">message?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="cm">/**</span>
@@ -3951,8 +4085,14 @@ all behave like any other chat.</p>
 
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * The reason why this tool call was rejected.</span>
+<span class="cm">     * &#39;hookStopped&#39;: a preToolCall hook stopped the turn (continue:false).</span>
+<span class="cm">     * &#39;interrupted&#39;: the LLM response streaming this tool call failed</span>
+<span class="cm">     * (e.g. connection dropped), so it will never run.</span>
+<span class="cm">     * &#39;invalidArguments&#39;: the LLM sent arguments that are not valid JSON;</span>
+<span class="cm">     * it gets the error as the result of the call and may send it again.</span>
+<span class="cm">     * &#39;user&#39;: no specific reason is known.</span>
 <span class="cm">     */</span>
-<span class="w">    </span><span class="nx">reason</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;userChoiceDeny&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;userConfigDeny&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;hookRejected&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;userPromptStop&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;userStop&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">reason</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;userChoiceDeny&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;userConfigDeny&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;hookRejected&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;hookStopped&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;userPromptStop&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;userStop&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;interrupted&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;invalidArguments&#39;</span><span class="p">;</span>
 
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * Summary text to present about this tool call, </span>
@@ -4010,9 +4150,18 @@ all behave like any other chat.</p>
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * The chatId of this running subagent, useful to link other chat/ContentReceived</span>
 <span class="cm">     * messages to this tool call.</span>
-<span class="cm">     * Available from toolCallRun afterwards</span>
+<span class="cm">     * Available from toolCallRun afterwards.</span>
+<span class="cm">     * A subagent continued with spawn_agent&#39;s `chat_id` keeps its chatId, so several</span>
+<span class="cm">     * tool calls of the same parent chat can share it.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">subagentChatId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The [start, end) indexes of the subagent chat messages that this tool call ran,</span>
+<span class="cm">     * [0, 0] when it did not run. Set on toolCalled. History replay uses it to show</span>
+<span class="cm">     * each call&#39;s part of a continued subagent.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">subagentMessageRange</span><span class="o">?:</span><span class="w"> </span><span class="p">[</span><span class="kt">number</span><span class="p">,</span><span class="w"> </span><span class="kt">number</span><span class="p">];</span>
 
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     *  The model this subagent is using.</span>
@@ -4154,7 +4303,8 @@ all behave like any other chat.</p>
 <span class="w">    </span><span class="nx">approvalKey?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 
 <span class="w">    </span><span class="cm">/**</span>
-<span class="cm">     * Whether approvalKey is already remembered for this session.</span>
+<span class="cm">     * Whether approvalKey is already remembered for this chat session</span>
+<span class="cm">     * (the chat and its subagents).</span>
 <span class="cm">     * Only present when approvalKey is present.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">remembered?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
@@ -4189,9 +4339,18 @@ all behave like any other chat.</p>
 <span class="cm">     * Unique identifier for this flag.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">contentId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Id of the message the flag belongs after (message contentId or</span>
+<span class="cm">     * content id). Only sent by `chat/addFlag` to clients with the</span>
+<span class="cm">     * `incrementalUpdates` capability; when absent, render the flag at the</span>
+<span class="cm">     * current position. Clients may skip rendering when that message is not</span>
+<span class="cm">     * loaded (e.g. on an unloaded history page).</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">afterContentId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-approve-tool-call">Chat approve tool call (➡️)<a class="headerlink" href="#chat-approve-tool-call" title="Permanent link">#</a></h3>
+<h3 id="chat-approve-tool-call">Chat approve tool call (→)<a class="headerlink" href="#chat-approve-tool-call" title="Permanent link">#</a></h3>
 <p>A client notification for server to approve a waiting tool call.
 This will execute the tool call and continue the LLM chat loop.</p>
 <p><em>Notification:</em></p>
@@ -4207,6 +4366,8 @@ This will execute the tool call and continue the LLM chat loop.</p>
 
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * The approach to save this tool call.</span>
+<span class="cm">     * &#39;session&#39; remembers the approval for the chat session: the chat and its subagents,</span>
+<span class="cm">     * in memory only, until the chat is cleared or the server restarts.</span>
 <span class="cm">     * For tools with granular approval (eca shell_command and git), &#39;session&#39; remembers</span>
 <span class="cm">     * the specific approved commands (e.g. &quot;git checkout&quot;) instead of the whole tool.</span>
 <span class="cm">     */</span>
@@ -4218,7 +4379,7 @@ This will execute the tool call and continue the LLM chat loop.</p>
 <span class="w">    </span><span class="nx">toolCallId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-reject-tool-call">Chat reject tool call (➡️)<a class="headerlink" href="#chat-reject-tool-call" title="Permanent link">#</a></h3>
+<h3 id="chat-reject-tool-call">Chat reject tool call (→)<a class="headerlink" href="#chat-reject-tool-call" title="Permanent link">#</a></h3>
 <p>A client notification for server to reject a waiting tool call.
 This will not execute the tool call and return to the LLM chat loop.</p>
 <p><em>Notification:</em></p>
@@ -4238,7 +4399,7 @@ This will not execute the tool call and return to the LLM chat loop.</p>
 <span class="w">    </span><span class="nx">toolCallId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-query-context">Chat Query Context (↩️)<a class="headerlink" href="#chat-query-context" title="Permanent link">#</a></h3>
+<h3 id="chat-query-context">Chat Query Context (↩)<a class="headerlink" href="#chat-query-context" title="Permanent link">#</a></h3>
 <p>A request sent from client to server, querying for all the available contexts for user add to prompt calls.</p>
 <p><em>Request:</em> </p>
 <ul>
@@ -4275,7 +4436,7 @@ This will not execute the tool call and return to the LLM chat loop.</p>
 <span class="w">    </span><span class="nx">contexts</span><span class="o">:</span><span class="w"> </span><span class="kt">ChatContext</span><span class="p">[];</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-query-files">Chat Query Files (↩️)<a class="headerlink" href="#chat-query-files" title="Permanent link">#</a></h3>
+<h3 id="chat-query-files">Chat Query Files (↩)<a class="headerlink" href="#chat-query-files" title="Permanent link">#</a></h3>
 <p>A request sent from client to server, querying for available files for the user to add as context to prompt calls.
 Similar to <code>chat/queryContext</code> but returns only file-based contexts.</p>
 <p><em>Request:</em> </p>
@@ -4308,7 +4469,7 @@ Similar to <code>chat/queryContext</code> but returns only file-based contexts.<
 <span class="w">    </span><span class="nx">files</span><span class="o">:</span><span class="w"> </span><span class="kt">ChatContext</span><span class="p">[];</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-query-commands">Chat Query Commands (↩️)<a class="headerlink" href="#chat-query-commands" title="Permanent link">#</a></h3>
+<h3 id="chat-query-commands">Chat Query Commands (↩)<a class="headerlink" href="#chat-query-commands" title="Permanent link">#</a></h3>
 <p>A request sent from client to server, querying for all the available commands for user to call.
 Commands are multiple possible actions like MCP prompts, doctor, costs. Usually the 
 UX follows <code>/&lt;command&gt;</code> to spawn a command.</p>
@@ -4368,7 +4529,7 @@ UX follows <code>/&lt;command&gt;</code> to spawn a command.</p>
 <span class="w">    </span><span class="p">}];</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-stop-prompt">Chat stop prompt (➡️)<a class="headerlink" href="#chat-stop-prompt" title="Permanent link">#</a></h3>
+<h3 id="chat-stop-prompt">Chat stop prompt (→)<a class="headerlink" href="#chat-stop-prompt" title="Permanent link">#</a></h3>
 <p>A client notification for server to stop the current chat prompt with LLM if running.
 This will stop LLM loops or ignore subsequent LLM responses so other prompts can be triggered.</p>
 <p><em>Notification:</em></p>
@@ -4383,13 +4544,24 @@ This will stop LLM loops or ignore subsequent LLM responses so other prompts can
 <span class="w">    </span><span class="nx">chatId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-steer-prompt">Chat steer prompt (➡️)<a class="headerlink" href="#chat-steer-prompt" title="Permanent link">#</a></h3>
+<h3 id="chat-steer-prompt">Chat steer prompt (→)<a class="headerlink" href="#chat-steer-prompt" title="Permanent link">#</a></h3>
 <p>A client notification to steer the current running prompt by injecting a user message
 at the next LLM loop turn boundary (e.g. after tool calls complete).
 If the prompt finishes before the steer is consumed, the client should send it as a regular prompt.</p>
 <p>Messages matching commands that are safe to run while a prompt is in flight (currently <code>/btw</code>)
 are not queued: the server executes them immediately as a regular prompt, so e.g. a steered
 <code>/btw</code> forks the chat right away without waiting for the running turn.</p>
+<p>A steered <code>/compact [instructions]</code> is queued like a regular message, but at the turn boundary
+the server compacts the chat with those instructions (as a manual compaction) and then resumes
+the running task, instead of injecting the command text into the conversation.</p>
+<p>Other native commands that do not affect the running turn (<code>/sync-system-prompt</code>, <code>/costs</code>,
+<code>/context</code>, <code>/chats</code>, <code>/skills</code>, <code>/rules</code>, <code>/subagents</code>, <code>/plugins</code>, <code>/hooks</code>, <code>/prompt-show</code>,
+<code>/repo-map-show</code>, <code>/doctor</code>, <code>/config</code>, <code>/remote</code>, <code>/debug-chat</code>, <code>/export</code>, <code>/approvals</code>,
+<code>/forget-approvals</code>) are also queued and
+executed at the turn boundary: their output is shown and the task resumes. Native commands that
+would change the chat or start another prompt (<code>/model</code>, <code>/agent</code>, <code>/fork</code>, <code>/resume</code>,
+<code>/delete-chat</code>, <code>/login</code>, <code>/init</code>, ...) are refused with a system message and not queued.
+Custom commands, skills, MCP prompts and any other text are injected as plain user text.</p>
 <p><em>Notification:</em></p>
 <ul>
 <li>method: <code>chat/promptSteer</code></li>
@@ -4407,7 +4579,7 @@ are not queued: the server executes them immediately as a regular prompt, so e.g
 <span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-steer-prompt-remove">Chat steer prompt remove (➡️)<a class="headerlink" href="#chat-steer-prompt-remove" title="Permanent link">#</a></h3>
+<h3 id="chat-steer-prompt-remove">Chat steer prompt remove (→)<a class="headerlink" href="#chat-steer-prompt-remove" title="Permanent link">#</a></h3>
 <p>A client notification to discard any pending steer message that has not yet been consumed by the LLM loop.
 The notification is idempotent: if no steer message is pending (or it was already consumed at the next turn boundary),
 the server silently does nothing.</p>
@@ -4423,11 +4595,14 @@ the server silently does nothing.</p>
 <span class="w">    </span><span class="nx">chatId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-rollback">Chat rollback (↩️)<a class="headerlink" href="#chat-rollback" title="Permanent link">#</a></h3>
+<h3 id="chat-rollback">Chat rollback (↩)<a class="headerlink" href="#chat-rollback" title="Permanent link">#</a></h3>
 <p>A client request to rollback chat messages to before a specific user sent message using <code>contentId</code>.
-Clients should show an option close to user sent messages in chat to rollback, calling this method.
+Clients should show an option close to user sent messages in chat to rollback, calling this method, only for
+messages carrying a <code>contentId</code>: some user messages, like a compaction summary, have none.
 Server will then remove the messages from its memory after that contentId and produce <code>chat/cleared</code> followed 
-with <code>chat/contentReceived</code> with the kept messages.</p>
+with <code>chat/contentReceived</code> with the kept messages. Clients with the <code>incrementalUpdates</code> capability receive
+a single <code>chat/truncated</code> instead. When the chat is unknown or <code>contentId</code> is missing or matches no message,
+the server returns an error without changing the history or any file.</p>
 <p><em>Request:</em> </p>
 <ul>
 <li>method: <code>chat/rollback</code></li>
@@ -4440,7 +4615,8 @@ with <code>chat/contentReceived</code> with the kept messages.</p>
 <span class="w">    </span><span class="nx">chatId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 
 <span class="w">    </span><span class="cm">/**</span>
-<span class="cm">     * The message content id.</span>
+<span class="cm">     * The contentId of the message to roll back to: it and every later</span>
+<span class="cm">     * message are removed.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">contentId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 
@@ -4453,9 +4629,15 @@ with <code>chat/contentReceived</code> with the kept messages.</p>
 <span class="kr">type</span><span class="w"> </span><span class="nx">ChatRollbackInclude</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;messages&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;tools&#39;</span><span class="p">;</span>
 </code></pre></div>
 <p><em>Response:</em></p>
-<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatRollbackResponse</span><span class="w"> </span><span class="p">{}</span>
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatRollbackResponse</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Present when nothing was rolled back: the chat is unknown, `contentId`</span>
+<span class="cm">     * is missing or blank (`invalid_request`) or matches no message of the chat.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">error</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;chat_not_found&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;invalid_request&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;content_not_found&#39;</span><span class="p">;</span><span class="w"> </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">};</span>
+<span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-clear">Chat clear (↩️)<a class="headerlink" href="#chat-clear" title="Permanent link">#</a></h3>
+<h3 id="chat-clear">Chat clear (↩)<a class="headerlink" href="#chat-clear" title="Permanent link">#</a></h3>
 <p>A client request to clear specific aspects of an existing chat while keeping the chat entity intact.
 Unlike <code>chat/delete</code>, this preserves the chat identity, metadata and any features coupled to it.
 After response, clients should clear only the relevant parts of the chat UI.</p>
@@ -4471,7 +4653,8 @@ After response, clients should clear only the relevant parts of the chat UI.</p>
 <span class="w">    </span><span class="nx">chatId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 
 <span class="w">    </span><span class="cm">/**</span>
-<span class="cm">     * Whether to clear the messages and tool calls of the chat.</span>
+<span class="cm">     * Whether to clear the messages and tool calls of the chat,</span>
+<span class="cm">     * also forgetting its remembered tool call approvals.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">messages?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="p">}</span>
@@ -4479,12 +4662,14 @@ After response, clients should clear only the relevant parts of the chat UI.</p>
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatClearResponse</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<h3 id="chat-add-flag">Chat add flag (➡️)<a class="headerlink" href="#chat-add-flag" title="Permanent link">#</a></h3>
+<h3 id="chat-add-flag">Chat add flag (→)<a class="headerlink" href="#chat-add-flag" title="Permanent link">#</a></h3>
 <p>A client request to add a named flag (checkpoint) to the chat history.
 The flag is inserted after the message identified by the given <code>contentId</code>.
 The <code>contentId</code> matches against both message-level <code>contentId</code> (user messages) and
 content <code>id</code> fields (tool calls, reasons, etc), allowing placement between any message types.
-Flags are persisted as messages and propagate automatically with fork and resume.</p>
+Flags are persisted as messages and propagate automatically with fork and resume.
+Server then emits <code>chat/cleared</code> followed by the full history via <code>chat/contentReceived</code>, or, for clients with
+the <code>incrementalUpdates</code> capability, a single flag <code>chat/contentReceived</code> carrying <code>afterContentId</code>.</p>
 <p><em>Request:</em></p>
 <ul>
 <li>method: <code>chat/addFlag</code></li>
@@ -4511,7 +4696,7 @@ Flags are persisted as messages and propagate automatically with fork and resume
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatAddFlagResponse</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<h3 id="chat-remove-flag">Chat remove flag (➡️)<a class="headerlink" href="#chat-remove-flag" title="Permanent link">#</a></h3>
+<h3 id="chat-remove-flag">Chat remove flag (→)<a class="headerlink" href="#chat-remove-flag" title="Permanent link">#</a></h3>
 <p>A client request to remove a flag from the chat history.
 The client is responsible for removing the flag from the UI after a successful response.</p>
 <p><em>Request:</em></p>
@@ -4534,11 +4719,13 @@ The client is responsible for removing the flag from the UI after a successful r
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatRemoveFlagResponse</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<h3 id="chat-fork">Chat fork (➡️)<a class="headerlink" href="#chat-fork" title="Permanent link">#</a></h3>
+<h3 id="chat-fork">Chat fork (→)<a class="headerlink" href="#chat-fork" title="Permanent link">#</a></h3>
 <p>A client request to fork the chat into a new chat with messages up to and including
 the message identified by the given <code>contentId</code>. The server creates the new chat,
 sends a <code>chat/opened</code> notification with the new chat, then streams the kept messages
-via <code>chat/contentReceived</code>. A system message is also sent to the original chat.</p>
+(only the newest page of them for clients with the <code>incrementalUpdates</code> capability) via
+<code>chat/contentReceived</code>. The fork always keeps the full history. A system message is
+also sent to the original chat.</p>
 <p><em>Request:</em></p>
 <ul>
 <li>method: <code>chat/fork</code></li>
@@ -4563,9 +4750,15 @@ via <code>chat/contentReceived</code>. A system message is also sent to the orig
 <span class="cm">     * Absent when the given contentId was not found.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">chatId?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Pagination info for the streamed messages, present when the client has</span>
+<span class="cm">     * the `incrementalUpdates` capability. Same as `chat/opened` `history`.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">meta?</span><span class="o">:</span><span class="w"> </span><span class="kt">ChatHistoryMeta</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-cleared">Chat cleared (⬅️)<a class="headerlink" href="#chat-cleared" title="Permanent link">#</a></h3>
+<h3 id="chat-cleared">Chat cleared (←)<a class="headerlink" href="#chat-cleared" title="Permanent link">#</a></h3>
 <p>A server notification to clear a chat UI, currently supporting removing only messages of the chat.</p>
 <p><em>Notification:</em> </p>
 <ul>
@@ -4585,11 +4778,33 @@ via <code>chat/contentReceived</code>. A system message is also sent to the orig
 <span class="w">    </span><span class="nx">messages</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-opened">Chat opened (⬅️)<a class="headerlink" href="#chat-opened" title="Permanent link">#</a></h3>
+<h3 id="chat-truncated">Chat truncated (←)<a class="headerlink" href="#chat-truncated" title="Permanent link">#</a></h3>
+<p>A server notification to remove a message and everything after it from a chat UI, keeping the earlier
+messages as they are. Only sent to clients with the <code>incrementalUpdates</code> capability, currently after
+<code>chat/rollback</code>. When the message is not loaded in the client (e.g. it is on an unloaded history page),
+clients should re-open the chat via <code>chat/open</code>.</p>
+<p><em>Notification:</em> </p>
+<ul>
+<li>method: <code>chat/truncated</code></li>
+<li>params: <code>ChatTruncatedParams</code> defined as follows:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatTruncatedParams</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The chat session identifier.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">chatId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The contentId of the first removed message.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">contentId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="chat-opened">Chat opened (←)<a class="headerlink" href="#chat-opened" title="Permanent link">#</a></h3>
 <p>A server notification indicating that a chat exists or was just materialized
 server-side. Emitted when:</p>
 <ul>
-<li>a chat is forked via <code>/fork</code> or the <code>chat/fork</code> request,</li>
+<li>a chat is forked via <code>/fork</code>, <code>/btw</code> or the <code>chat/fork</code> request,</li>
 <li>a persisted chat is replayed via <code>chat/open</code>,</li>
 <li>a client-supplied <code>chatId</code> is seen for the first time on <code>chat/prompt</code>
   (the legacy null-<code>chatId</code> path does not emit this).</li>
@@ -4615,9 +4830,17 @@ follow as <code>chat/contentReceived</code> notifications.</p>
 <span class="cm">     * not yet have a title.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">title?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Pagination info when only the newest page of the chat&#39;s messages</span>
+<span class="cm">     * follows, for chats the server creates (`/fork`, `/btw`, `chat/fork`)</span>
+<span class="cm">     * for clients with the `incrementalUpdates` capability. Older messages</span>
+<span class="cm">     * can be paged via `chat/history` using `beforeCursor`.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">history?</span><span class="o">:</span><span class="w"> </span><span class="kt">ChatHistoryMeta</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-status-changed">Chat status changed (⬅️)<a class="headerlink" href="#chat-status-changed" title="Permanent link">#</a></h3>
+<h3 id="chat-status-changed">Chat status changed (←)<a class="headerlink" href="#chat-status-changed" title="Permanent link">#</a></h3>
 <p>A server notification carrying lifecycle transitions for a chat. Clients
 typically use it to drive a "chat is running/idle/stopping" indicator.</p>
 <p><em>Notification:</em></p>
@@ -4643,7 +4866,7 @@ typically use it to drive a "chat is running/idle/stopping" indicator.</p>
 <span class="w">    </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;running&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;idle&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;stopping&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-deleted">Chat deleted (⬅️)<a class="headerlink" href="#chat-deleted" title="Permanent link">#</a></h3>
+<h3 id="chat-deleted">Chat deleted (←)<a class="headerlink" href="#chat-deleted" title="Permanent link">#</a></h3>
 <p>A server notification confirming that a chat was deleted (either via the
 <code>chat/delete</code> request from this client or via another connected client / a
 server-side cleanup such as <code>chatRetentionDays</code>). Clients should remove the
@@ -4661,7 +4884,7 @@ chat from their UI.</p>
 <span class="w">    </span><span class="nx">chatId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-delete">Chat delete (↩️)<a class="headerlink" href="#chat-delete" title="Permanent link">#</a></h3>
+<h3 id="chat-delete">Chat delete (↩)<a class="headerlink" href="#chat-delete" title="Permanent link">#</a></h3>
 <p>A client request to delete a existing chat, removing all previous messages and used tokens/costs from memory, good for reduce context or start a new clean chat.
 After response, clients should reset chat UI to a clean state.</p>
 <p><em>Request:</em> </p>
@@ -4679,7 +4902,7 @@ After response, clients should reset chat UI to a clean state.</p>
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatDeleteResponse</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<h3 id="chat-update">Chat update (↩️)<a class="headerlink" href="#chat-update" title="Permanent link">#</a></h3>
+<h3 id="chat-update">Chat update (↩)<a class="headerlink" href="#chat-update" title="Permanent link">#</a></h3>
 <p>A client request to update chat metadata like title.
 Server will persist the change, broadcast to all connected clients via <code>chat/contentReceived</code> with metadata content, and return an empty response.</p>
 <p><em>Request:</em></p>
@@ -4701,7 +4924,8 @@ Server will persist the change, broadcast to all connected clients via <code>cha
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * When true, enables trust mode for this chat — tool calls that would</span>
 <span class="cm">     * normally require manual approval are auto-accepted. Does not override deny rules.</span>
-<span class="cm">     * Changes apply immediately to subsequent tool calls in the active prompt.</span>
+<span class="cm">     * Changes apply immediately to subsequent tool calls in the active prompt,</span>
+<span class="cm">     * including those of the subagents running in this chat.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">trust?</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="p">}</span>
@@ -4709,7 +4933,7 @@ Server will persist the change, broadcast to all connected clients via <code>cha
 <p><em>Response:</em></p>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ChatUpdateResponse</span><span class="w"> </span><span class="p">{}</span>
 </code></pre></div>
-<h3 id="chat-list">Chat list (↩️)<a class="headerlink" href="#chat-list" title="Permanent link">#</a></h3>
+<h3 id="chat-list">Chat list (↩)<a class="headerlink" href="#chat-list" title="Permanent link">#</a></h3>
 <p>A client request to list all persisted chats for the current workspace,
 so a freshly-started client can populate its sidebar without waiting for the
 user to resume or re-create each chat.</p>
@@ -4767,7 +4991,7 @@ default, falling back to <code>createdAt</code> when <code>updatedAt</code> is m
 <span class="w">    </span><span class="nx">kind</span><span class="o">?:</span><span class="w"> </span><span class="s1">&#39;inline&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-open">Chat open (↩️)<a class="headerlink" href="#chat-open" title="Permanent link">#</a></h3>
+<h3 id="chat-open">Chat open (↩)<a class="headerlink" href="#chat-open" title="Permanent link">#</a></h3>
 <p>A client request to hydrate a previously-persisted chat so it can be rendered
 in the UI. The server replays the chat by emitting <code>chat/cleared</code> (messages),
 <code>chat/opened</code>, and a sequence of <code>chat/contentReceived</code> notifications matching
@@ -4845,7 +5069,7 @@ the response carries <code>meta</code> so the client can page older via <code>ch
 <span class="w">    </span><span class="nx">error</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;cursor_expired&#39;</span><span class="p">;</span><span class="w"> </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">};</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-history">Chat history (↩️)<a class="headerlink" href="#chat-history" title="Permanent link">#</a></h3>
+<h3 id="chat-history">Chat history (↩)<a class="headerlink" href="#chat-history" title="Permanent link">#</a></h3>
 <p>A client request to fetch a window of a persisted chat's history as a single
 response (no streaming), so an editor can hydrate a bounded view and page older
 on demand instead of receiving the full replay. The returned <code>contents</code> are the
@@ -4856,8 +5080,10 @@ the selected window; an opaque <code>after</code> cursor pages forward instead. 
 sentinel <code>"lastCompaction"</code> may be passed as <code>before</code>/<code>after</code>: <code>after: "lastCompaction"</code>
 returns the messages since the last compaction (the active context),
 <code>before: "lastCompaction"</code> the summarized-away history. Cursors are ephemeral —
-a cursor whose message no longer exists (e.g. after a rollback or clear) returns
-a <code>cursor_expired</code> error, prompting the client to refetch the latest page.</p>
+a cursor whose message no longer exists returns a <code>cursor_expired</code> error,
+prompting the client to refetch the latest page. The exception is a cursor whose
+message was cut off by a rollback: everything left is older than it, so a
+<code>before</code> page returns the newest remaining messages.</p>
 <p><em>Request:</em></p>
 <ul>
 <li>method: <code>chat/history</code></li>
@@ -4909,7 +5135,7 @@ a <code>cursor_expired</code> error, prompting the client to refetch the latest 
 <span class="w">    </span><span class="nx">compactionCursor</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-selected-agent-changed">Chat selected agent changed (➡️)<a class="headerlink" href="#chat-selected-agent-changed" title="Permanent link">#</a></h3>
+<h3 id="chat-selected-agent-changed">Chat selected agent changed (→)<a class="headerlink" href="#chat-selected-agent-changed" title="Permanent link">#</a></h3>
 <p>A client notification for server telling the user selected a different agent in chat.</p>
 <p><em>Notification:</em></p>
 <ul>
@@ -4936,7 +5162,7 @@ a <code>cursor_expired</code> error, prompting the client to refetch the latest 
 <blockquote>
 <p><strong>Backward compatibility:</strong> The legacy method <code>chat/selectedBehaviorChanged</code> with <code>{ behavior: string }</code> is still supported.</p>
 </blockquote>
-<h3 id="chat-selected-model-changed">Chat selected model changed (➡️)<a class="headerlink" href="#chat-selected-model-changed" title="Permanent link">#</a></h3>
+<h3 id="chat-selected-model-changed">Chat selected model changed (→)<a class="headerlink" href="#chat-selected-model-changed" title="Permanent link">#</a></h3>
 <p>A client notification for server telling the user selected a different model in chat.
 Server will respond with a <code>config/updated</code> notification containing the available variants for the selected model
 and the suggested variant to select (if any).</p>
@@ -4969,7 +5195,7 @@ and the suggested variant to select (if any).</p>
 <span class="w">    </span><span class="nx">variant?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="editor-diagnostics">Editor diagnostics (↪️)<a class="headerlink" href="#editor-diagnostics" title="Permanent link">#</a></h3>
+<h3 id="editor-diagnostics">Editor diagnostics (↪)<a class="headerlink" href="#editor-diagnostics" title="Permanent link">#</a></h3>
 <p>A server request to retrieve LSP or any other kind of diagnostics if available from current workspaces.
 Useful for server to provide to LLM information about errors/warnings about current code.</p>
 <p><em>Request:</em> </p>
@@ -5025,7 +5251,7 @@ Useful for server to provide to LLM information about errors/warnings about curr
 <span class="w">    </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="editor-definition">Editor definition (↪️)<a class="headerlink" href="#editor-definition" title="Permanent link">#</a></h3>
+<h3 id="editor-definition">Editor definition (↪)<a class="headerlink" href="#editor-definition" title="Permanent link">#</a></h3>
 <p>A server request to retrieve from the editor the definition location(s) of the symbol
 at a position in a file, typically backed by the editor's language server (LSP).
 Only sent when client declared the <code>codeAssistant.editor.definition</code> capability.</p>
@@ -5097,7 +5323,7 @@ actionable feedback to the LLM.</li>
 <span class="w">    </span><span class="nx">range</span><span class="o">:</span><span class="w"> </span><span class="kt">Range</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="editor-references">Editor references (↪️)<a class="headerlink" href="#editor-references" title="Permanent link">#</a></h3>
+<h3 id="editor-references">Editor references (↪)<a class="headerlink" href="#editor-references" title="Permanent link">#</a></h3>
 <p>A server request to retrieve from the editor the references of the symbol
 at a position in a file, typically backed by the editor's language server (LSP).
 Only sent when client declared the <code>codeAssistant.editor.references</code> capability.</p>
@@ -5146,7 +5372,7 @@ Only sent when client declared the <code>codeAssistant.editor.references</code> 
 <span class="w">    </span><span class="nx">message?</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="chat-ask-question">Chat ask question (↪️)<a class="headerlink" href="#chat-ask-question" title="Permanent link">#</a></h3>
+<h3 id="chat-ask-question">Chat ask question (↪)<a class="headerlink" href="#chat-ask-question" title="Permanent link">#</a></h3>
 <p>A server request to ask the user a question and receive an answer during a chat session.
 This enables the server to present the user with a question (optionally with predefined options)
 and wait for their response. When <code>allowFreeform</code> is true, the user can type a custom answer in addition to selecting a predefined option.
@@ -5216,7 +5442,7 @@ during interactive flows like the <code>/login</code> command (e.g. to select a 
 <span class="w">    </span><span class="nx">cancelled</span><span class="o">:</span><span class="w"> </span><span class="kt">boolean</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="completion">Completion (↩️)<a class="headerlink" href="#completion" title="Permanent link">#</a></h3>
+<h3 id="completion">Completion (↩)<a class="headerlink" href="#completion" title="Permanent link">#</a></h3>
 <p>A request sent from client to server, asking for a text to be presented to user as a inline completion for the current text code.</p>
 <p><em>Request:</em> </p>
 <ul>
@@ -5271,7 +5497,7 @@ during interactive flows like the <code>/login</code> command (e.g. to select a 
 <span class="w">    </span><span class="nx">range</span><span class="o">:</span><span class="w"> </span><span class="kt">Range</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="rewrite">Rewrite (↩️)<a class="headerlink" href="#rewrite" title="Permanent link">#</a></h3>
+<h3 id="rewrite">Rewrite (↩)<a class="headerlink" href="#rewrite" title="Permanent link">#</a></h3>
 <p>A request sent from client to server, asking to rewrite a piece of code in editor with what LLM respond.
 The response is streamed via <code>rewrite/contentReceived</code> server notifications.</p>
 <p><em>Request:</em> </p>
@@ -5323,7 +5549,7 @@ The response is streamed via <code>rewrite/contentReceived</code> server notific
 <span class="w">    </span><span class="nx">model</span><span class="o">:</span><span class="w"> </span><span class="kt">Model</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="rewrite-content-received">Rewrite Content Received (⬅️)<a class="headerlink" href="#rewrite-content-received" title="Permanent link">#</a></h3>
+<h3 id="rewrite-content-received">Rewrite Content Received (←)<a class="headerlink" href="#rewrite-content-received" title="Permanent link">#</a></h3>
 <p>A server notification with a new content from the rewrite LLM request.</p>
 <p><em>Notification:</em> </p>
 <ul>
@@ -5390,7 +5616,7 @@ The response is streamed via <code>rewrite/contentReceived</code> server notific
 <span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="nx">RewriteFinishedContent</span><span class="p">;</span>
 </code></pre></div>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<h3 id="config-updated">Config updated (⬅️)<a class="headerlink" href="#config-updated" title="Permanent link">#</a></h3>
+<h3 id="config-updated">Config updated (←)<a class="headerlink" href="#config-updated" title="Permanent link">#</a></h3>
 <p>A server notification with the new config server is considering (models, agents etc), usually related to config or auth changes.
 Clients should update UI accordingly, if a field is missing/null, means it had no change since last config updated, so clients should ignore.</p>
 <p><em>Notification:</em> </p>
@@ -5430,7 +5656,8 @@ Clients should update UI accordingly, if a field is missing/null, means it had n
 <span class="cm">         * clients should forcefully update chat selected model.</span>
 <span class="cm">         * </span>
 <span class="cm">         * Server returns this when starting and only when makes sense to </span>
-<span class="cm">         * force update a model, like a config change.</span>
+<span class="cm">         * force update a model, like a config change, or scoped via `chatId`</span>
+<span class="cm">         * when a chat&#39;s model changes server-side (e.g. `/model`, `/resume`).</span>
 <span class="cm">         */</span>
 <span class="w">        </span><span class="nx">selectModel?</span><span class="o">:</span><span class="w"> </span><span class="kt">Model</span><span class="p">;</span>
 
@@ -5439,7 +5666,10 @@ Clients should update UI accordingly, if a field is missing/null, means it had n
 <span class="cm">         * clients should forcefully update chat selected agent.</span>
 <span class="cm">         * </span>
 <span class="cm">         * Server returns this when starting and only when makes sense to </span>
-<span class="cm">         * force update an agent, like a config change.</span>
+<span class="cm">         * force update an agent, like a config change, or scoped via `chatId`</span>
+<span class="cm">         * when a chat&#39;s agent changes server-side (e.g. `/agent`, `/resume`,</span>
+<span class="cm">         * remote UI). Clients must apply it: the agent sent on the next</span>
+<span class="cm">         * `chat/prompt` wins over the one persisted on the chat.</span>
 <span class="cm">         */</span>
 <span class="w">        </span><span class="nx">selectAgent?</span><span class="o">:</span><span class="w"> </span><span class="kt">ChatAgent</span><span class="p">;</span>
 
@@ -5477,7 +5707,7 @@ Clients should update UI accordingly, if a field is missing/null, means it had n
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="tool-updated">Tool updated (⬅️)<a class="headerlink" href="#tool-updated" title="Permanent link">#</a></h3>
+<h3 id="tool-updated">Tool updated (←)<a class="headerlink" href="#tool-updated" title="Permanent link">#</a></h3>
 <p>A server notification about a tool status update like a MCP or native tool.
 This is useful for clients present to user the list of configured tools/MCPs,
 their status and available tools and actions.</p>
@@ -5486,7 +5716,7 @@ their status and available tools and actions.</p>
 <li>method: <code>tool/serverUpdated</code></li>
 <li>params: <code>ToolServerUpdatedParams</code> defined as follows:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kr">type</span><span class="w"> </span><span class="nx">ToolServerUpdatedParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">EcaServerUpdatedParams</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">MCPServerUpdatedParams</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kr">type</span><span class="w"> </span><span class="nx">ToolServerUpdatedParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">EcaServerUpdatedParams</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">ModuleServerUpdatedParams</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">MCPServerUpdatedParams</span><span class="p">;</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">EcaServerUpdatedParams</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;native&#39;</span><span class="p">;</span>
@@ -5498,13 +5728,40 @@ their status and available tools and actions.</p>
 <span class="w">    </span><span class="cm">/**</span>
 <span class="cm">     * The built-in tools supported by eca.</span>
 <span class="cm">     *</span>
-<span class="cm">     * Built-in tools include: read_file, write_file, edit_file, move_file,</span>
+<span class="cm">     * Built-in tools include: read_file, view_image, write_file, edit_file, move_file,</span>
 <span class="cm">     * directory_tree, shell_command, editor_diagnostics, editor_definition,</span>
 <span class="cm">     * editor_references, compact_chat, skill, spawn_agent, and task.</span>
 <span class="cm">     *</span>
 <span class="cm">     * Note: `spawn_agent` and `task` are excluded from subagent tool sets.</span>
 <span class="cm">     * `spawn_agent` is excluded to prevent nesting, and `task` because</span>
 <span class="cm">     * task list state is chat-local and should be managed by the parent agent.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">tools</span><span class="o">:</span><span class="w"> </span><span class="kt">ServerTool</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * The tools of an external module (a user&#39;s or a plugin&#39;s ECA module). Its</span>
+<span class="cm"> * tools are named `&lt;name&gt;__&lt;tool&gt;`, like MCP tools. Sent again when modules</span>
+<span class="cm"> * load, reload, are enabled or disabled, or add or remove tools; when a</span>
+<span class="cm"> * module has no tools anymore, `tool/serverRemoved` drops its server.</span>
+<span class="cm"> */</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ModuleServerUpdatedParams</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;module&#39;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The module&#39;s tool prefix, e.g. `jira` for `jira__issue`.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The module id, e.g. `acme/jira`.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">module</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;running&#39;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * The module&#39;s tools.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">tools</span><span class="o">:</span><span class="w"> </span><span class="kt">ServerTool</span><span class="p">[];</span>
 <span class="p">}</span>
@@ -5641,9 +5898,10 @@ their status and available tools and actions.</p>
 <span class="w">    </span><span class="nx">mimeType</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="tool-server-removed">Tool server removed (⬅️)<a class="headerlink" href="#tool-server-removed" title="Permanent link">#</a></h3>
-<p>A server notification that an MCP server has been removed (via <code>mcp/removeServer</code>).
-Clients should drop the corresponding entry from any cached server list / UI.</p>
+<h3 id="tool-server-removed">Tool server removed (←)<a class="headerlink" href="#tool-server-removed" title="Permanent link">#</a></h3>
+<p>A server notification that an MCP server has been removed (via <code>mcp/removeServer</code>), or that
+an external module's tool server is gone (the module was removed or disabled, or has no tools
+anymore). Clients should drop the corresponding entry from any cached server list / UI.</p>
 <p><em>Notification:</em></p>
 <ul>
 <li>method: <code>tool/serverRemoved</code></li>
@@ -5651,12 +5909,12 @@ Clients should drop the corresponding entry from any cached server list / UI.</p
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kd">interface</span><span class="w"> </span><span class="nx">ToolServerRemovedParams</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="cm">/**</span>
-<span class="cm">     * The MCP server name that was removed.</span>
+<span class="cm">     * The name of the MCP server, or of the module tool server, that was removed.</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="stop-mcp-server">Stop MCP server (➡️)<a class="headerlink" href="#stop-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="stop-mcp-server">Stop MCP server (→)<a class="headerlink" href="#stop-mcp-server" title="Permanent link">#</a></h3>
 <p>A client notification for server to stop a MCP server, stopping the process.
 Updates its status via <code>tool/serverUpdated</code> notification.</p>
 <p><em>Notification:</em></p>
@@ -5671,7 +5929,7 @@ Updates its status via <code>tool/serverUpdated</code> notification.</p>
 <span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="start-mcp-server">Start MCP server (➡️)<a class="headerlink" href="#start-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="start-mcp-server">Start MCP server (→)<a class="headerlink" href="#start-mcp-server" title="Permanent link">#</a></h3>
 <p>A client notification for server to start a stopped MCP server, starting the process again.
 Updates its status via <code>tool/serverUpdated</code> notification.</p>
 <p><em>Notification:</em></p>
@@ -5686,7 +5944,7 @@ Updates its status via <code>tool/serverUpdated</code> notification.</p>
 <span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="connect-mcp-server">Connect MCP server (➡️)<a class="headerlink" href="#connect-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="connect-mcp-server">Connect MCP server (→)<a class="headerlink" href="#connect-mcp-server" title="Permanent link">#</a></h3>
 <p>A client notification to initiate OAuth authorization for an MCP server that has <code>requires-auth</code> status.
 The server starts a local OAuth callback server and opens the authorization URL in the browser.
 On successful authorization, the server completes the OAuth flow and sends <code>tool/serverUpdated</code> with status <code>running</code>.</p>
@@ -5702,7 +5960,7 @@ On successful authorization, the server completes the OAuth flow and sends <code
 <span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="logout-mcp-server">Logout MCP server (➡️)<a class="headerlink" href="#logout-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="logout-mcp-server">Logout MCP server (→)<a class="headerlink" href="#logout-mcp-server" title="Permanent link">#</a></h3>
 <p>A client notification to logout from an MCP server, clearing its stored OAuth credentials
 and restarting the server. The server will re-detect auth requirements and send
 <code>tool/serverUpdated</code> with status <code>requires-auth</code>.</p>
@@ -5718,7 +5976,7 @@ and restarting the server. The server will re-detect auth requirements and send
 <span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="disable-mcp-server">Disable MCP server (➡️)<a class="headerlink" href="#disable-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="disable-mcp-server">Disable MCP server (→)<a class="headerlink" href="#disable-mcp-server" title="Permanent link">#</a></h3>
 <p>A client notification to disable an MCP server. Persists <code>disabled: true</code> in the config file,
 stops the server if running, and sends <code>tool/serverUpdated</code> with status <code>disabled</code>.</p>
 <p><em>Notification:</em></p>
@@ -5733,7 +5991,7 @@ stops the server if running, and sends <code>tool/serverUpdated</code> with stat
 <span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="enable-mcp-server">Enable MCP server (➡️)<a class="headerlink" href="#enable-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="enable-mcp-server">Enable MCP server (→)<a class="headerlink" href="#enable-mcp-server" title="Permanent link">#</a></h3>
 <p>A client notification to enable a disabled MCP server. Removes the <code>disabled</code> flag from the config file,
 starts the server, and sends <code>tool/serverUpdated</code> with the new status.</p>
 <p><em>Notification:</em></p>
@@ -5748,7 +6006,7 @@ starts the server, and sends <code>tool/serverUpdated</code> with the new status
 <span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="update-mcp-server">Update MCP Server (↩️)<a class="headerlink" href="#update-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="update-mcp-server">Update MCP Server (↩)<a class="headerlink" href="#update-mcp-server" title="Permanent link">#</a></h3>
 <p>Updates an MCP server's connection configuration (command/args or url), persists the change to the appropriate config file (local or global), and restarts the server.</p>
 <p><em>Request:</em></p>
 <ul>
@@ -5778,7 +6036,7 @@ starts the server, and sends <code>tool/serverUpdated</code> with the new status
 <ul>
 <li>result: <code>{}</code></li>
 </ul>
-<h3 id="add-mcp-server">Add MCP Server (↩️)<a class="headerlink" href="#add-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="add-mcp-server">Add MCP Server (↩)<a class="headerlink" href="#add-mcp-server" title="Permanent link">#</a></h3>
 <p>Adds a new MCP server definition at runtime, persists it to the chosen config file
 (global or workspace-local), and starts the server asynchronously. On success the server
 also emits a follow-up <code>tool/serverUpdated</code> notification as the new server progresses
@@ -5884,7 +6142,7 @@ optimistically add the row locally — they should rely on that broadcast.</p>
 <span class="w">    </span><span class="p">};</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="remove-mcp-server">Remove MCP Server (↩️)<a class="headerlink" href="#remove-mcp-server" title="Permanent link">#</a></h3>
+<h3 id="remove-mcp-server">Remove MCP Server (↩)<a class="headerlink" href="#remove-mcp-server" title="Permanent link">#</a></h3>
 <p>Removes an MCP server definition at runtime: stops the server if running, deletes the
 entry from the owning config file (global or workspace-local), clears any stored OAuth
 credentials, and emits a <code>tool/serverRemoved</code> notification so clients can drop the
@@ -5927,7 +6185,7 @@ row from their UI.</p>
 <span class="p">}</span>
 </code></pre></div>
 <h2 id="provider-management">Provider Management<a class="headerlink" href="#provider-management" title="Permanent link">#</a></h2>
-<h3 id="list-providers">List Providers (↩️)<a class="headerlink" href="#list-providers" title="Permanent link">#</a></h3>
+<h3 id="list-providers">List Providers (↩)<a class="headerlink" href="#list-providers" title="Permanent link">#</a></h3>
 <p>Returns all known providers with their current authentication status and available models.</p>
 <p><em>Request:</em></p>
 <ul>
@@ -5957,6 +6215,41 @@ row from their UI.</p>
 <span class="w">    </span><span class="nx">models</span><span class="o">:</span><span class="w"> </span><span class="kt">ProviderModel</span><span class="p">[];</span>
 <span class="w">    </span><span class="cm">/** Provider-level config key-vals (api, url, fetchModels, httpClient, retryRules, etc.). */</span>
 <span class="w">    </span><span class="nx">settings?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">any</span><span class="o">&gt;</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Latest subscription quota, only for subscription logins (`auth.type`</span>
+<span class="cm">     * &quot;oauth&quot;) once the provider reported it, either on a request or via its</span>
+<span class="cm">     * usage endpoint fetched after login, on startup and by `/quota`.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">quota?</span><span class="o">:</span><span class="w"> </span><span class="kt">ProviderQuota</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * Account-level subscription quota reported by the provider (e.g. Claude</span>
+<span class="cm"> * Pro/Max, ChatGPT, GitHub Copilot). Unrelated to chat tokens or API billing.</span>
+<span class="cm"> */</span>
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ProviderQuota</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/** When this snapshot was captured, epoch seconds. */</span>
+<span class="w">    </span><span class="nx">updatedAt</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Quota windows as reported by the provider, shortest first. Ids, labels</span>
+<span class="cm">     * and durations come from the provider, clients should not assume fixed</span>
+<span class="cm">     * windows. A window whose `resetsAt` already passed is stale until the next</span>
+<span class="cm">     * update.</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="nx">windows</span><span class="o">:</span><span class="w"> </span><span class="kt">ProviderQuotaWindow</span><span class="p">[];</span>
+<span class="p">}</span>
+
+<span class="kd">interface</span><span class="w"> </span><span class="nx">ProviderQuotaWindow</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/** Stable id derived from the provider data (e.g. &quot;5h&quot;, &quot;7d&quot;, &quot;primary&quot;, &quot;premium_interactions&quot;). */</span>
+<span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/** Short display label (e.g. &quot;5h&quot;, &quot;7d&quot;, &quot;Premium&quot;). */</span>
+<span class="w">    </span><span class="nx">label</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/** Used share of the window, 0-100. May exceed 100 when the provider allows overage. */</span>
+<span class="w">    </span><span class="nx">usedPercent</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/** When the window resets, epoch seconds. */</span>
+<span class="w">    </span><span class="nx">resetsAt?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/** Window duration in minutes, when reported. */</span>
+<span class="w">    </span><span class="nx">windowMinutes?</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kd">interface</span><span class="w"> </span><span class="nx">ProviderAuth</span><span class="w"> </span><span class="p">{</span>
@@ -5997,7 +6290,7 @@ row from their UI.</p>
 <span class="w">    </span><span class="nx">settings?</span><span class="o">:</span><span class="w"> </span><span class="kt">Record</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="nx">any</span><span class="o">&gt;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="login-provider">Login Provider (↩️)<a class="headerlink" href="#login-provider" title="Permanent link">#</a></h3>
+<h3 id="login-provider">Login Provider (↩)<a class="headerlink" href="#login-provider" title="Permanent link">#</a></h3>
 <p>Initiates a login flow for a provider. Two-round-trip design: calling without a method returns
 available methods to choose from; calling with a method starts the authentication flow and
 returns an action descriptor telling the client what to render.</p>
@@ -6069,7 +6362,7 @@ returns an action descriptor telling the client what to render.</p>
 <span class="w">    </span><span class="kr">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;secret&#39;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s1">&#39;text&#39;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="login-provider-input">Login Provider Input (↩️)<a class="headerlink" href="#login-provider-input" title="Permanent link">#</a></h3>
+<h3 id="login-provider-input">Login Provider Input (↩)<a class="headerlink" href="#login-provider-input" title="Permanent link">#</a></h3>
 <p>Submits collected input data (API key, authorization code, URL, models) to complete a login flow.</p>
 <p><em>Request:</em></p>
 <ul>
@@ -6087,7 +6380,7 @@ returns an action descriptor telling the client what to render.</p>
 <ul>
 <li>result: <code>{ action: 'done' }</code></li>
 </ul>
-<h3 id="logout-provider">Logout Provider (↩️)<a class="headerlink" href="#logout-provider" title="Permanent link">#</a></h3>
+<h3 id="logout-provider">Logout Provider (↩)<a class="headerlink" href="#logout-provider" title="Permanent link">#</a></h3>
 <p>Clears authentication for a provider and re-syncs available models.</p>
 <p><em>Request:</em></p>
 <ul>
@@ -6103,9 +6396,9 @@ returns an action descriptor telling the client what to render.</p>
 <ul>
 <li>result: <code>{}</code></li>
 </ul>
-<h3 id="provider-updated">Provider Updated (⬅️)<a class="headerlink" href="#provider-updated" title="Permanent link">#</a></h3>
-<p>A server notification sent when a provider's authentication state or available models change.
-Sent after login completion, logout, token renewal, or model sync. Contains the full provider
+<h3 id="provider-updated">Provider Updated (←)<a class="headerlink" href="#provider-updated" title="Permanent link">#</a></h3>
+<p>A server notification sent when a provider's authentication state, available models or subscription quota change.
+Sent after login completion, logout, token renewal, model sync, or when the quota clients display changes. Contains the full provider
 status (same shape as items in <code>providers/list</code> response).</p>
 <p><em>Notification:</em></p>
 <ul>
@@ -6113,7 +6406,7 @@ status (same shape as items in <code>providers/list</code> response).</p>
 <li>params: <code>ProviderStatus</code> (see <code>providers/list</code> response above)</li>
 </ul>
 <h2 id="background-jobs">Background Jobs<a class="headerlink" href="#background-jobs" title="Permanent link">#</a></h2>
-<h3 id="list-jobs">List Jobs (↩️)<a class="headerlink" href="#list-jobs" title="Permanent link">#</a></h3>
+<h3 id="list-jobs">List Jobs (↩)<a class="headerlink" href="#list-jobs" title="Permanent link">#</a></h3>
 <p>Returns all active (non-evicted) background jobs across all chats.</p>
 <p><em>Request:</em></p>
 <ul>
@@ -6151,7 +6444,7 @@ status (same shape as items in <code>providers/list</code> response).</p>
 <span class="w">    </span><span class="nx">chatLabel</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="kill-job">Kill Job (↩️)<a class="headerlink" href="#kill-job" title="Permanent link">#</a></h3>
+<h3 id="kill-job">Kill Job (↩)<a class="headerlink" href="#kill-job" title="Permanent link">#</a></h3>
 <p>Terminates a running background job.</p>
 <p><em>Request:</em></p>
 <ul>
@@ -6167,7 +6460,7 @@ status (same shape as items in <code>providers/list</code> response).</p>
 <ul>
 <li>result: <code>{ killed: boolean }</code></li>
 </ul>
-<h3 id="read-job-output">Read Job Output (↩️)<a class="headerlink" href="#read-job-output" title="Permanent link">#</a></h3>
+<h3 id="read-job-output">Read Job Output (↩)<a class="headerlink" href="#read-job-output" title="Permanent link">#</a></h3>
 <p>Returns the currently buffered output lines for a background job. This is a snapshot read
 that does not affect the LLM's incremental read cursor.</p>
 <p><em>Request:</em></p>
@@ -6200,7 +6493,7 @@ that does not affect the LLM's incremental read cursor.</p>
 <span class="w">    </span><span class="nx">stream</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;stdout&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;stderr&quot;</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="jobs-updated">Jobs Updated (⬅️)<a class="headerlink" href="#jobs-updated" title="Permanent link">#</a></h3>
+<h3 id="jobs-updated">Jobs Updated (←)<a class="headerlink" href="#jobs-updated" title="Permanent link">#</a></h3>
 <p>A server notification sent when the background jobs list changes. Sent after a job is
 created, completes, fails, is killed, or is evicted. Contains the full list of active jobs.</p>
 <p><em>Notification:</em></p>
@@ -6209,7 +6502,7 @@ created, completes, fails, is killed, or is evicted. Contains the full list of a
 <li>params: <code>JobsListResult</code> (see <code>jobs/list</code> response above)</li>
 </ul>
 <h2 id="general-features">General features<a class="headerlink" href="#general-features" title="Permanent link">#</a></h2>
-<h3 id="progress">progress (⬅️)<a class="headerlink" href="#progress" title="Permanent link">#</a></h3>
+<h3 id="progress">progress (←)<a class="headerlink" href="#progress" title="Permanent link">#</a></h3>
 <p>A notification from the server reporting the progress of an initialization task. Each task
 sends a <code>start</code> notification when it begins and a <code>finish</code> notification when it completes (or fails).
 Clients can track all tasks to derive aggregate initialization progress.</p>
@@ -6227,7 +6520,7 @@ Clients can track all tasks to derive aggregate initialization progress.</p>
 <span class="w">  </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="showmessage">showMessage (⬅️)<a class="headerlink" href="#showmessage" title="Permanent link">#</a></h3>
+<h3 id="showmessage">showMessage (←)<a class="headerlink" href="#showmessage" title="Permanent link">#</a></h3>
 <p>A notification from server telling client to present a message to user.</p>
 <p><em>Notification:</em> </p>
 <ul>
@@ -6256,7 +6549,7 @@ Clients can track all tasks to derive aggregate initialization progress.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="September 1, 2026 18:31:28 UTC">September 1, 2026</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 14, 2026 12:48:23 UTC">November 14, 2026</span>
   </span>
 
     
@@ -6299,10 +6592,10 @@ Clients can track all tasks to derive aggregate initialization progress.</p>
     </a>
     
     
-    <a href="../troubleshooting/" class="md-footer__link md-footer__link--next">
+    <a href="../read-chat/" class="md-footer__link md-footer__link--next">
       <div class="md-footer__title">
         <span class="md-footer__direction">Next</span>
-        <span class="md-ellipsis">Troubleshooting</span>
+        <span class="md-ellipsis">read-chat CLI</span>
       </div>
       <div class="md-footer__button md-icon">
         
@@ -6318,7 +6611,8 @@ Clients can track all tasks to derive aggregate initialization progress.</p>
       <div class="md-copyright">
         
           <div class="md-copyright__highlight">
-            Copyright &copy; 2026 ECA Contributors — Free & Open Source
+            Copyright &copy; 2026 ECA Contributors. Free & Open Source.
+            <span class="eca-footer-credit">Icons courtesy of <a href="https://lucide.dev" target="_blank" rel="noopener">Lucide</a>.</span>
           </div>
         
       </div>
@@ -6370,11 +6664,17 @@ Clients can track all tasks to derive aggregate initialization progress.</p>
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.expand", "navigation.sections", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.follow", "content.code.copy", "content.code.select"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+  
       <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
       
+        <script src="../js/toc-hash.js"></script>
+      
     
+  
+  
+
   </body>
 </html>
